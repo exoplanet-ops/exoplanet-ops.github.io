@@ -17,6 +17,14 @@ const exo = [
 {name: "14 Herculis b", source: "img/14herculisb.JPG", type: "Gas Giant", loadName: "gas-giant", desc: "14 Herculis b is a gas giant exoplanet that orbits a G-type star. Its mass is 4.66 Jupiters, it takes 4.9 years to complete one orbit of its star, and is 2.93 AU from its star. Its discovery was announced in 2002.", link: "https://exoplanets.nasa.gov/exoplanet-catalog/6991/14-herculis-b/"},
 
 {name: "16 Cygni B b", source: "img/16cygnibb.JPG", type: "Gas Giant", loadName: "gas-giant", desc: "16 Cygni B b is a gas giant exoplanet that orbits a G-type star. Its mass is 1.78 Jupiters, it takes 2.2 years to complete one orbit of its star, and is 1.66 AU from its star. Its discovery was announced in 1996.", link: "https://exoplanets.nasa.gov/exoplanet-catalog/6992/16-cygni-b-b/"},
+
+{name: "61 Virginis c", source: "img/61virginisc.JPG", type: "Neptune Like", loadName: "neptune-like", desc: "61 Virginis c is a Neptune-like exoplanet that orbits a G-type star. Its mass is 18.2 Earths, it takes 38 days to complete one orbit of its star, and is 0.2175 AU from its star. Its discovery was announced in 2009.", link: "https://exoplanets.nasa.gov/exoplanet-catalog/7008/61-virginis-c/"},
+
+{name: "61 Virginis d", source: "img/61virginisd.JPG", type: "Neptune Like", loadName: "neptune-like", desc: "61 Virginis d is a Neptune-like exoplanet that orbits a G-type star. Its mass is 22.9 Earths, it takes 123 days to complete one orbit of its star, and is 0.476 AU from its star. Its discovery was announced in 2009.", link: "https://exoplanets.nasa.gov/exoplanet-catalog/7009/61-virginis-d/"},
+
+{name: "CoRoT-7 b", source: "img/corot-7b.JPG", type: "Super Earth", loadName: "super-earth", desc: "CoRoT-7 b is a super Earth exoplanet that orbits a G-type star. Its mass is 3.1783 Earths, it takes 0.9 days to complete one orbit of its star, and is 0.017016 AU from its star. Its discovery was announced in 2009.", link: "https://exoplanets.nasa.gov/exoplanet-catalog/1242/corot-7-b/"},
+
+{name: "EPIC 201833600 c", source: "img/epic201833600c.JPG", type: "Terrestrial", loadName: "terrestrial", desc: "EPIC 201833600 c is a terrestrial exoplanet that orbits a K-type star. Its mass is 0.972 Earths and it takes 4 days to complete one orbit of its star. Its discovery was announced in 2019.", link: "https://exoplanets.nasa.gov/exoplanet-catalog/7394/epic-201833600-c/"},
 ]
 
 for (var i = 0; i < exo.length; i++) {
