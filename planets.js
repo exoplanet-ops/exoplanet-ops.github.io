@@ -25,6 +25,8 @@ const exo = [
 {name: "CoRoT-7 b", source: "img/corot-7b.JPG", type: "Super Earth", loadName: "super-earth", desc: "CoRoT-7 b is a super Earth exoplanet that orbits a G-type star. Its mass is 3.1783 Earths, it takes 0.9 days to complete one orbit of its star, and is 0.017016 AU from its star. Its discovery was announced in 2009.", link: "https://exoplanets.nasa.gov/exoplanet-catalog/1242/corot-7-b/"},
 
 {name: "EPIC 201833600 c", source: "img/epic201833600c.JPG", type: "Terrestrial", loadName: "terrestrial", desc: "EPIC 201833600 c is a terrestrial exoplanet that orbits a K-type star. Its mass is 0.972 Earths and it takes 4 days to complete one orbit of its star. Its discovery was announced in 2019.", link: "https://exoplanets.nasa.gov/exoplanet-catalog/7394/epic-201833600-c/"},
+
+{name: "HD 189733 b", source: "img/hd189733b.JPG", type: "Gasi Giant", loadName: "gas-giant", desc: "HD 189733 b is a gas giant exoplanet that orbits a G-type star. Its mass is 1.13 Jupiters, it takes 2.2 days to complete one orbit of its star, and is 0.0313 AU from its star. Its discovery was announced in 2005.", link: "https://exoplanets.nasa.gov/exoplanet-catalog/6876/hd-189733-b/"},
 ]
 
 for (var i = 0; i < exo.length; i++) {
