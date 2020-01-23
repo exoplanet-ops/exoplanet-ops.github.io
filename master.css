@@ -17,10 +17,12 @@ align-content: stretch;
 text-shadow: 4px 4px #1f1e1e;
 }
 
-img {
-  max-width: 340px;
-}
-
 .btext {
   color: blue;
+}
+
+#planetRep {
+  display: block;
+  margin: 0 auto;
+  width: 60%;
 }
