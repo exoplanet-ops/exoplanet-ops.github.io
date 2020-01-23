@@ -14,5 +14,13 @@ align-content: stretch;
 }
 
 .display {
-text-shadow: 2px 2px #545252fc;
+text-shadow: 4px 4px #1f1e1e;
+}
+
+img {
+  max-width: 340px;
+}
+
+.btext {
+  color: blue;
 }
