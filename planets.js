@@ -17,7 +17,10 @@ oPeriod: 326,
 oPeriodUnits: "days",
 detectionMethod: "Radial Velocity",
 star: "K-type",
-distance: 305},
+distance: 305,
+starName: "11 Comae Berenices",
+starMass: 2.70,
+starRadius: 16.79},
 
 {name: "11 Ursae Minoris b",
 source: "img/11ursaeminorisb.JPG",
@@ -580,6 +583,17 @@ var plty = document.getElementById("planetType");
 var or = document.getElementById("or");
 var op = document.getElementById("op");
 var oe = document.getElementById("oe");
+var pmass = document.getElementById("mass");
+var pradius = document.getElementById("radius");
+var largePlanet = document.getElementById("largerPlanet");
+var smallPlanet = document.getElementById("smallerPlanet")
+var sc = document.getElementById("smallCircle");
+var sm = document.getElementById("starmass");
+var sr = document.getElementById("starradius");
+var smallStar = document.getElementById("smallerStar");
+var largeStar = document.getElementById("largerStar");
+var sc2= document.getElementById("smallCircle2");
+
 var cr;
 for (var i = 0; i < mdb.length; i++) {
 	mdb[i].addEventListener("click", function() {
@@ -607,5 +621,42 @@ for (var i = 0; i < mdb.length; i++) {
 		or.innerHTML = exo[cr].oRadius;
 		op.innerHTML = exo[cr].oPeriod + " " + exo[cr].oPeriodUnits;
 		oe.innerHTML = exo[cr].eccentricity;
+		pmass.innerHTML = exo[cr].mass + " x " + exo[cr].massRadUnits + "s" ;
+		pradius.innerHTML = exo[cr].pRadius + " x " + exo[cr].massRadUnits;
+		sm.innerHTML = exo[cr].starMass + " x Our Sun";
+		sr.innerHTML = exo[cr].starRadius + " x Our Sun";
+		
+		
+		if (exo[cr].pRadius >= 1) {
+			var x = 133 * (1/exo[cr].pRadius);
+			x=String(x) + "px"
+			largePlanet.innerHTML = exo[cr].name;
+			smallPlanet.innerHTML = exo[cr].massRadUnits;
+			sc.style.width = x;
+			sc.style.height = x;
+			
+		} else {
+			largePlanet.innerHTML = exo[cr].massRadUnits;
+			smallPlanet.innerHTML = exo[cr].name;
+			var x = 133 * exo[cr].pRadius;
+			x=String(x) + "px"
+			sc.style.width = x;
+			sc.style.height = x;
+		}
+		if (exo[cr].starRadius >= 1) {
+			largeStar.innerHTML = exo[cr].starName;
+			smallStar.innerHTML = "Our Sun"
+			var y = 133 * (1/exo[cr].starRadius);
+			y=String(y) + "px"
+			sc2.style.width = y;
+			sc2.style.height = y;
+		} else {
+			smallStar.innerHTML = exo[cr].starName;
+			largeStar.innerHTML = "Our Sun"
+			var y = 133 * exo[cr].starRadius;
+			y=String(y) + "px"
+			sc2.style.width = y;
+			sc2.style.height = y;
+		}
 	});
 }
