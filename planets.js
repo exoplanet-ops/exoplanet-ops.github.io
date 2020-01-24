@@ -499,7 +499,7 @@ source: "img/k2-209b.JPG",
 type: "Terrestrial",
 loadName: "terrestrial",
 desc: "K2-209 b is a terrestrial exoplanet that orbits a K-type star. Its mass is 0.586 Earths and it takes 2.1 days to complete one orbit of its star. Its discovery was announced in 2018.",
-link: "exoplanets.nasa.gov/exoplanet-catalog/6239/k2-209-b/",
+link: "https://exoplanets.nasa.gov/exoplanet-catalog/6239/k2-209-b/",
 marker:"k2209b",
 date: 2018,
 mass: 0.586,
@@ -558,6 +558,7 @@ for (var i = 0; i < exo.length; i++) {
 	btn1.classList.add("modal-trigger");
 	btn1.classList.add(exo[i].marker);
 	btn2.href=exo[i].link;
+	btn2.target="_blank";
 	pic.src=exo[i].source;
 	btn1.classList.add("btn");
 	btn1.classList.add("btn-primary");

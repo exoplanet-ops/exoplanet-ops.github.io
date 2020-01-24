@@ -5,6 +5,7 @@ padding-right: 10px;
 
 p {
 font-size: 9pt;
+margin: 0;
 }
 
 #content {
@@ -46,7 +47,7 @@ font-size: 1.8rem;
 }
 
 .datum {
-width: 35%;
+width: 45%;
 margin: 0 auto;
 }
 
@@ -60,12 +61,12 @@ border: 1px solid white;
 flex: 1 0 100px;
 display: flex;
 justify-content: space-between;
-align-items: center;
+align-items: stretch;
 padding: 10px;
 }
 
 .unit {
-margin-bottom: 0;
+font-size: 1.3rem;
 }
 .data {
 font-size: 3rem;
