@@ -32,7 +32,7 @@ pRadius: 1.09,
 massRadUnits: "Jupiter",
 oRadius: 1.53,
 eccentricity: 0.08,
-oPeriod: 1.4,
+oPeriod: "1.4",
 oPeriodUnits: "years",
 detectionMethod: "Radial Velocity",
 star: "K-type",
@@ -573,6 +573,12 @@ var header = document.getElementById("planetName");
 var paragraph = document.getElementById("modalP");
 var footer = document.getElementById("modalF");
 var picture = document.getElementById("planetRep");
+var fullDesc = document.getElementById("descBox");
+var yearInfo = document.getElementById("yearDis");
+var plty = document.getElementById("planetType");
+var or = document.getElementById("or");
+var op = document.getElementById("op");
+var oe = document.getElementById("oe");
 var cr;
 for (var i = 0; i < mdb.length; i++) {
 	mdb[i].addEventListener("click", function() {
@@ -594,7 +600,11 @@ for (var i = 0; i < mdb.length; i++) {
 			picture.src = "img/cnc/unknown.jpg";
 		}
 		header.innerHTML = exo[cr].name;
-		paragraph.innerHTML = "Currently under construction...";
-		footer.innerHTML = "Check back for updates!"
+		fullDesc.innerHTML = exo[cr].desc;
+		yearInfo.innerHTML = exo[cr].date;
+		plty.innerHTML = exo[cr].type;
+		or.innerHTML = exo[cr].oRadius;
+		op.innerHTML = exo[cr].oPeriod + " " + exo[cr].oPeriodUnits;
+		oe.innerHTML = exo[cr].eccentricity;
 	});
 }

@@ -27,6 +27,7 @@
   animation-name: slideIn;
   animation-duration: 0.4s;
   height: 100%;
+overflow: scroll;
 }
 
 /* The Close Button */
@@ -90,7 +91,7 @@
 }
 
 .header {
-  font-size: 80px;
+  font-size: 60px;
   text-align: center;
   text-shadow: 4px 4px #1f1e1e;
 }

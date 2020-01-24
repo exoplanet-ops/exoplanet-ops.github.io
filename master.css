@@ -26,3 +26,47 @@ text-shadow: 4px 4px #1f1e1e;
   margin: 0 auto;
   width: 60%;
 }
+
+.data-block {
+margin: 0 auto;
+display: flex;
+flex-flow: flow wrap;
+justify-content: space-between;
+}
+
+.iterator {
+color: #fe9b35;
+font-size: 1.5rem;
+vertical-align: middle;
+}
+
+.data, .data-small {
+color: white;
+font-size: 1.8rem;
+}
+
+.datum {
+width: 35%;
+margin: 0 auto;
+}
+
+.datar {
+width: 65%;
+margin: 0 auto;
+}
+
+.data-box {
+border: 1px solid white;
+flex: 1 0 100px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px;
+}
+
+.unit {
+margin-bottom: 0;
+}
+.data {
+font-size: 3rem;
+}
