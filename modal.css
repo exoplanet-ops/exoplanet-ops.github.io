@@ -89,9 +89,3 @@ overflow: scroll;
   from {opacity: 1}
   to {opacity: 0}
 }
-
-.header {
-  font-size: 60px;
-  text-align: center;
-  text-shadow: 4px 4px #1f1e1e;
-}

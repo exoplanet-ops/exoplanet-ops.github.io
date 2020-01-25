@@ -2,13 +2,9 @@
 <html lang="en-us"
 <head>
 <title>CMCN Exoplanetary Catalog</title>
-<!-- Latest compiled and minified CSS -->
+<meta content="width=device-width, initial-scale=1" name="viewport">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-<!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="master.css">
 <link rel="stylesheet" href="modal.css">
@@ -44,6 +40,7 @@
 	<div class="datum">
 		<p class="iterator">DISCOVERED <span class="data-small" id="yearDis">2010</span></p>
 		<p class="iterator">PLANET TYPE <span class="data-small" id="planetType">Gas Giant</span></p>
+    <p class="iterator">DISTANCE FROM EARTH <span class="data-small" id="distanceFrom">Def Light Years</span></p>
 		<br>
 		<p class="descriptor data-small" id="descBox">11 Comae Berenices b is a gas giant exoplanet that orbits a K-			type star. Its mass is 19.4 Jupiters, it takes 326 days to complete one orbit of its star, and is 1.29 			AU from its star. Its discovery was announced in 2007.</p>
 		<br>
@@ -71,6 +68,7 @@
 				<p class="drop"><span class="larger-p" id="largerPlanet">Planet Name B b</span><span class="smaller-p"  id="smallerPlanet">Jupiter</span>
 				<div class="larger lp circle">
 					<div class="smaller sp circle" id="smallCircle"></div>
+          <h1 id="unknownVal1" class="unknownVal circle smaller">Uk</h1>
 				</div>
 				<br>
 				<div class="no-border-data">
@@ -87,6 +85,7 @@
 				<p class="drop"><span class="larger-s" id="largerStar">Star Name B</span><span class="smaller-s" id="smallerStar">Our Sun</span>
 				<div class="larger ls circle">
 					<div class="smaller ss circle" id="smallCircle2"></div>
+          <h1 id="unknownVal2" class="unknownVal circle smaller">Uk</h1>
 				</div>
 				<br>
 				<div class="no-border-data">
@@ -97,12 +96,15 @@
 					<p class="iterator">RADIUS</p>
 					<p class="data-m" id="starradius">Radius x Unit</p>
 				</div>
+        <div class="no-border-data">
+					<p class="iterator">STAR TYPE</p>
+					<p class="data-m" id="startype">Type</p>
+				</div>
 			</div>
 		</div>
 	</div>
     </div>
     <div class="modal-footer1">
-      <h3 id="modalF">Modal Footer</h3>
     </div>
   </div>
 

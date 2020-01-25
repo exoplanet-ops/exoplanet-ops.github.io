@@ -39,7 +39,10 @@ oPeriod: "1.4",
 oPeriodUnits: "years",
 detectionMethod: "Radial Velocity",
 star: "K-type",
-distance: 410},
+distance: 410,
+starName: "11 Ursae Minoris",
+starMass: 1.80,
+starRadius: 20.68 },
 
 {name: "EPIC 201497682 b",
 source: "img/epic201497682b.JPG",
@@ -52,13 +55,16 @@ date: 2019,
 mass: 0.26,
 pRadius: 0.692,
 massRadUnits: "Earth",
-oRadius: "Unknown",
+oRadius: "unknown",
 eccentricity: 0.0,
 oPeriod: 2.1,
 oPeriodUnits: "days",
 detectionMethod: "Transit",
 star: "K-type",
-distance: 831},
+distance: 831,
+starName: "EPIC 201497682",
+starMass: 0.78,
+starRadius: 0.55},
 
 {name: "55 Cancri e",
 source: "img/55cancrie.JPG",
@@ -77,7 +83,10 @@ oPeriod: 0.7,
 oPeriodUnits: "days",
 detectionMethod: "Radial Velocity",
 star: "G-type",
-distance: 41},
+distance: 41,
+starName: "55 Cancri",
+starMass: 0.91,
+starRadius: 0.95},
 
 {name: "61 Virginis b",
 source: "img/61virginisb.JPG",
@@ -96,7 +105,10 @@ oPeriod: 4.2,
 oPeriodUnits: "days",
 detectionMethod: "Radial Velocity",
 star: "G-type",
-distance: 28},
+distance: 28,
+starName: "61 Virginis",
+starMass: 0.95,
+starRadius: 0.96},
 
 {name: "Kepler-37 e",
 source: "img/nophoto.JPG",
@@ -106,16 +118,19 @@ desc: "Kepler-37 e is an unknown exoplanet that orbits a G-type star. Its mass i
 link: "https://exoplanets.nasa.gov/exoplanet-catalog/4790/kepler-37-e/",
 marker:"kepler37e",
 date: 2014,
-mass: "Unknown",
-pRadius: "Unknown",
-massRadUnits: "Unknown",
-oRadius: "Unknown",
+mass: "unknown",
+pRadius: "unknown",
+massRadUnits: "unknown",
+oRadius: "unknown",
 eccentricity: 0.0,
 oPeriod: 51.2,
 oPeriodUnits: "days",
 detectionMethod: "Transit Timing Variations",
 star: "G-type",
-distance: 209},
+distance: 209,
+starName: "Kepler-37",
+starMass: 0.80,
+starRadius: 0.79},
 
 {name: "14 Andromedae b",
 source: "img/14andromedaeb.JPG",
@@ -134,7 +149,10 @@ oPeriod: 185.8,
 oPeriodUnits: "days",
 detectionMethod: "Radial Velocity",
 star: "K-type",
-distance: 247},
+distance: 247,
+starName: "14 Andromedae",
+starMass: 2.2,
+starRadius: 10.49},
 
 {name: "14 Herculis b",
 source: "img/14herculisb.JPG",
@@ -153,7 +171,10 @@ oPeriod: 4.9,
 oPeriodUnits: "years",
 detectionMethod: "Radial Velocity",
 star: "G-type",
-distance: 59},
+distance: 59,
+starName: "14 Herculis",
+starMass: 0.9,
+starRadius: 0.8668},
 
 {name: "16 Cygni B b",
 source: "img/16cygnibb.JPG",
@@ -172,7 +193,10 @@ oPeriod: 2.2,
 oPeriodUnits: "years",
 detectionMethod: "Radial Velocity",
 star: "G-type",
-distance: 69},
+distance: 69,
+starName: "16 Cygni B",
+starMass: 1.04,
+starRadius: 1.116},
 
 {name: "61 Virginis c",
 source: "img/61virginisc.JPG",
@@ -191,7 +215,10 @@ oPeriod: 38,
 oPeriodUnits: "days",
 detectionMethod: "Radial Velocity",
 star: "G-type",
-distance: 28},
+distance: 28,
+starName: "61 Vrginis",
+starMass: 0.95,
+starRadius: 0.96},
 
 {name: "61 Virginis d",
 source: "img/61virginisd.JPG",
@@ -210,7 +237,10 @@ oPeriod: 123,
 oPeriodUnits: "days",
 detectionMethod: "Radial Velocity",
 star: "G-type",
-distance: 28},
+distance: 28,
+starName: "61 Virginis",
+starMass: 0.95,
+starRadius: 0.96},
 
 {name: "CoRoT-7 b",
 source: "img/corot-7b.JPG",
@@ -219,17 +249,20 @@ loadName: "super-earth",
 desc: "CoRoT-7 b is a super Earth exoplanet that orbits a G-type star. Its mass is 3.1783 Earths, it takes 0.9 days to complete one orbit of its star, and is 0.017016 AU from its star. Its discovery was announced in 2009.",
 link: "https://exoplanets.nasa.gov/exoplanet-catalog/1242/corot-7-b/",
 marker:"corot7b",
-date: "",
-mass: "",
-pRadius: "",
-massRadUnits: "",
-oRadius: "",
-eccentricity: "",
-oPeriod: "",
-oPeriodUnits: "",
-detectionMethod: "",
-star: "",
-distance: ""},
+date: 2009,
+mass: 3.1783,
+pRadius: 1.681,
+massRadUnits: "Earth",
+oRadius: 0.017016,
+eccentricity: 0.0,
+oPeriod: 0.9,
+oPeriodUnits: "days",
+detectionMethod: "Transit",
+star: "G-type",
+distance: 524,
+starName: "CoRoT-7",
+starMass: 0.91,
+starRadius: 0.82},
 
 {name: "EPIC 201833600 c",
 source: "img/epic201833600c.JPG",
@@ -238,17 +271,20 @@ loadName: "terrestrial",
 desc: "EPIC 201833600 c is a terrestrial exoplanet that orbits a K-type star. Its mass is 0.972 Earths and it takes 4 days to complete one orbit of its star. Its discovery was announced in 2019.",
 link: "https://exoplanets.nasa.gov/exoplanet-catalog/7394/epic-201833600-c/",
 marker:"epic201833600c",
-date: "",
-mass: "",
-pRadius: "",
-massRadUnits: "",
-oRadius: "",
-eccentricity: "",
-oPeriod: "",
-oPeriodUnits: "",
-detectionMethod: "",
-star: "",
-distance: ""},
+date: 2019,
+mass: 0.972,
+pRadius: 1.0,
+massRadUnits: "Earth",
+oRadius: "Unknown",
+eccentricity: 0.0,
+oPeriod: 4,
+oPeriodUnits: "days",
+detectionMethod: "Transit",
+star: "K-type",
+distance: "",
+starName: "EPIC 201833600",
+starMass: 0.61,
+starRadius: 0.63},
 
 {name: "HD 189733 b",
 source: "img/hd189733b.JPG",
@@ -257,18 +293,21 @@ loadName: "gas-giant",
 desc: "HD 189733 b is a gas giant exoplanet that orbits a G-type star. Its mass is 1.13 Jupiters, it takes 2.2 days to complete one orbit of its star, and is 0.0313 AU from its star. Its discovery was announced in 2005.",
 link: "https://exoplanets.nasa.gov/exoplanet-catalog/6876/hd-189733-b/",
 marker:"hd189733b",
-date: "",
-mass: "",
-pRadius: "",
-massRadUnits: "",
-oRadius: "",
-eccentricity: "",
-oPeriod: "",
-oPeriodUnits: "",
-detectionMethod: "",
-star: "",
-distance: ""},
-
+date: 2005,
+mass: 1.13,
+pRadius: 1.13,
+massRadUnits: "Jupiter",
+oRadius: 0.0313,
+eccentricity: 0.0,
+oPeriod: 2.2,
+oPeriodUnits: "days",
+detectionMethod: "Radial Velocity",
+star: "G-type",
+distance: 65,
+starName: "HD 189733",
+starMass: 0.79,
+starRadius: 0.75},
+//Here
 {name: "BD-06 1339 b",
 source: "img/bd-061339b.JPG",
 type: "Neptune-Like",
@@ -276,17 +315,20 @@ loadName: "neptune-like",
 desc: "BD-06 1339 b is a Neptune-like exoplanet that orbits a K-type star. Its mass is 8.5 Earths, it takes 3.9 days to complete one orbit of its star, and is 0.0428 AU from its star. Its discovery was announced in 2013.",
 link: "https://exoplanets.nasa.gov/exoplanet-catalog/7073/bd-06-1339-b/",
 marker:"bd061339b",
-date: "",
-mass: "",
-pRadius: "",
-massRadUnits: "",
-oRadius: "",
-eccentricity: "",
-oPeriod: "",
-oPeriodUnits: "",
-detectionMethod: "",
-star: "",
-distance: ""},
+date: 2013,
+mass: 8.5,
+pRadius: 2.787,
+massRadUnits: "Earth",
+oRadius: 0.0428,
+eccentricity: 0.0,
+oPeriod: 3.9,
+oPeriodUnits: "days",
+detectionMethod: "Radial Velocity",
+star: "K-type",
+distance: 66,
+starName: "BD-06 1339",
+starMass: 0.7,
+starRadius: 0.67},
 
 {name: "BD-08 2823 b",
 source: "img/bd-082823b.JPG",
@@ -295,17 +337,20 @@ loadName: "neptune-like",
 desc: "BD-08 2823 b is a Neptune-like exoplanet that orbits a K-type star. Its mass is 12.7132 Earths, it takes 5.6 days to complete one orbit of its star, and is 0.06 AU from its star. Its discovery was announced in 2009.",
 link: "https://exoplanets.nasa.gov/exoplanet-catalog/7071/bd-08-2823-b/",
 marker:"bd082823b",
-date: "",
-mass: "",
-pRadius: "",
-massRadUnits: "",
-oRadius: "",
-eccentricity: "",
-oPeriod: "",
-oPeriodUnits: "",
-detectionMethod: "",
-star: "",
-distance: ""},
+date: 2009,
+mass: 12.7132,
+pRadius: 3.53,
+massRadUnits: "Earth",
+oRadius: 0.06,
+eccentricity: 0.15,
+oPeriod: 5.6,
+oPeriodUnits: "days",
+detectionMethod: "Radial Velocity",
+star: "K-type",
+distance: 135,
+starName: "BD-08 2823",
+starMass: "uk",
+starRadius: "uk"},
 
 {name: "BD+20 594 b",
 source: "img/bd+20594b.JPG",
@@ -323,8 +368,11 @@ eccentricity: "",
 oPeriod: "",
 oPeriodUnits: "",
 detectionMethod: "",
-star: "",
-distance: ""},
+star: "G-type",
+distance: "",
+starName: "BD+20 594",
+starMass: "uk",
+starRadius: "uk"},
 
 {name: "EPIC 201238110 b",
 source: "img/epic201238110b.JPG",
@@ -342,8 +390,11 @@ eccentricity: "",
 oPeriod: "",
 oPeriodUnits: "",
 detectionMethod: "",
-star: "",
-distance: ""},
+star: "K-type",
+distance: "",
+starName: "EPIC 201238110",
+starMass: "uk" ,
+starRadius: "uk"},
 
 {name: "EPIC 201615463 c",
 source: "img/epic201615463c.JPG",
@@ -361,8 +412,11 @@ eccentricity: "",
 oPeriod: "",
 oPeriodUnits: "",
 detectionMethod: "",
-star: "",
-distance: ""},
+star: "G-type",
+distance: "",
+starName: "EPIC 201615463",
+starMass: "uk",
+starRadius: "uk"},
 
 {name: "EPIC 201754305 d",
 source: "img/epic201754305d.JPG",
@@ -380,8 +434,11 @@ eccentricity: "",
 oPeriod: "",
 oPeriodUnits: "",
 detectionMethod: "",
-star: "",
-distance: ""},
+star: "K-type",
+distance: "",
+starName: "EPIC 201754305",
+starMass: "uk",
+starRadius: "uk"},
 
 {name: "EPIC 201841433 b",
 source: "img/epic201841433b.JPG",
@@ -399,8 +456,11 @@ eccentricity: "",
 oPeriod: "",
 oPeriodUnits: "",
 detectionMethod: "",
-star: "",
-distance: ""},
+star: "G-type",
+distance: "",
+starName: "EPIC 201841433",
+starMass: "uk",
+starRadius: "uk"},
 
 {name: "EPIC 206215704 b",
 source: "img/epic206215704b.JPG",
@@ -418,8 +478,11 @@ eccentricity: "",
 oPeriod: "",
 oPeriodUnits: "",
 detectionMethod: "",
-star: "",
-distance: ""},
+star: "K-type",
+distance: "",
+starName: "EPIC 206215704",
+starMass: "uk",
+starRadius: "uk"},
 
 {name: "EPIC 206317286 b",
 source: "img/epic206317286b.JPG",
@@ -437,8 +500,11 @@ eccentricity: "",
 oPeriod: "",
 oPeriodUnits: "",
 detectionMethod: "",
-star: "",
-distance: ""},
+star: "G-type",
+distance: "",
+starName: "EPIC 206317286",
+starMass: "uk",
+starRadius: "uk"},
 
 {name: "K2-116 b",
 source: "img/k2-116b.JPG",
@@ -456,8 +522,11 @@ eccentricity: "",
 oPeriod: "",
 oPeriodUnits: "",
 detectionMethod: "",
-star: "",
-distance: ""},
+star: "K-type",
+distance: "",
+starName: "K2-116",
+starMass: "uk",
+starRadius: "uk"},
 
 {name: "K2-137 b",
 source: "img/k2-137b.JPG",
@@ -475,8 +544,11 @@ eccentricity: "",
 oPeriod: "",
 oPeriodUnits: "",
 detectionMethod: "",
-star: "",
-distance: ""},
+star: "M-type",
+distance: "",
+starName: "K2-137",
+starMass: "uk",
+starRadius: "uk"},
 
 {name: "K2-136 b",
 source: "img/k2-136b.JPG",
@@ -495,7 +567,10 @@ oPeriod: 8,
 oPeriodUnits: "days",
 detectionMethod: "Transit",
 star: "K-Type",
-distance: 194},
+distance: 194,
+starName: "K2-136",
+starMass: "uk",
+starRadius: "uk"},
 
 {name: "K2-209 b",
 source: "img/k2-209b.JPG",
@@ -514,7 +589,10 @@ oPeriod: 2.1,
 oPeriodUnits: "days",
 detectionMethod: "Transit",
 star: "K-Type",
-distance: 250},
+distance: 250,
+starName: "K2-209",
+starMass: "uk",
+starRadius: "uk"},
 
 ]
 for (var i = 0; i < exo.length; i++) {
@@ -532,6 +610,7 @@ for (var i = 0; i < exo.length; i++) {
 	var btn1 = document.createElement("BUTTON");
 	var btn2 = document.createElement("A");
 	var bblock=document.createElement("div");
+	var breaks = document.createElement("br");
 
 	shed.appendChild(plname);
 	para.appendChild(text);
@@ -542,6 +621,7 @@ for (var i = 0; i < exo.length; i++) {
 
 	cap.appendChild(shed);
 	cap.appendChild(para);
+	cap.appendChild(breaks);
 	cap.appendChild(bblock);
 
 	thumb.appendChild(pic);
@@ -592,7 +672,11 @@ var sm = document.getElementById("starmass");
 var sr = document.getElementById("starradius");
 var smallStar = document.getElementById("smallerStar");
 var largeStar = document.getElementById("largerStar");
-var sc2= document.getElementById("smallCircle2");
+var sc2 = document.getElementById("smallCircle2");
+var ukk = document.getElementById("unknownVal1");
+var ukk2 = document.getElementById("unknownVal2");
+var stype = document.getElementById("startype");
+var dis = document.getElementById("distanceFrom");
 
 var cr;
 for (var i = 0; i < mdb.length; i++) {
@@ -625,8 +709,28 @@ for (var i = 0; i < mdb.length; i++) {
 		pradius.innerHTML = exo[cr].pRadius + " x " + exo[cr].massRadUnits;
 		sm.innerHTML = exo[cr].starMass + " x Our Sun";
 		sr.innerHTML = exo[cr].starRadius + " x Our Sun";
-		
-		
+		stype.innerHTML = exo[cr].star;
+		dis.innerHTML = exo[cr].distance + " " + "light years";
+
+		if (exo[cr].star == "O-type") {
+			stype.style.color = "#004eff";
+		} else if (exo[cr].star =="B-type") {
+			stype.style.color = "#b6deff"
+		} else if (exo[cr].star == "A-type") {
+			stype.style.color = "#ffffff"
+		} else if (exo[cr].star =="F-type") {
+			stype.style.color = "#f9f3b1"
+		} else if (exo[cr].star == "G-type") {
+			stype.style.color = "#fff700"
+		} else if (exo[cr].star == "K-type") {
+			stype.style.color = "#ffa500"
+		} else if (exo[cr].star == "M-type") {
+			stype.style.color = "#d60000"
+		} else if (exo[cr].star == "unknown") {
+			stype.style.color = "#7b7b7b"
+		}
+
+
 		if (exo[cr].pRadius >= 1) {
 			var x = 133 * (1/exo[cr].pRadius);
 			x=String(x) + "px"
@@ -634,7 +738,7 @@ for (var i = 0; i < mdb.length; i++) {
 			smallPlanet.innerHTML = exo[cr].massRadUnits;
 			sc.style.width = x;
 			sc.style.height = x;
-			
+
 		} else {
 			largePlanet.innerHTML = exo[cr].massRadUnits;
 			smallPlanet.innerHTML = exo[cr].name;
@@ -657,6 +761,22 @@ for (var i = 0; i < mdb.length; i++) {
 			y=String(y) + "px"
 			sc2.style.width = y;
 			sc2.style.height = y;
+		}
+
+		if (exo[cr].starRadius=="unknown") {
+			sc2.style.display = "none";
+			ukk2.style.display = "block";
+		} else {
+			sc2.style.display = "block";
+			ukk2.style.display = "none";
+		}
+
+		if (exo[cr].pRadius=="unknown") {
+			sc.style.display = "none";
+			ukk.style.display = "block";
+		} else {
+			sc.style.display = "block";
+			ukk.style.display = "none";
 		}
 	});
 }
