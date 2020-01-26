@@ -111,6 +111,11 @@ margin-right: 10px;
 color: #ff9b3b;
 }
 
+.btn-group {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
 .smaller-s {
 margin-left: 10px;
 color: #ffd8b1;
@@ -190,6 +195,30 @@ display: none;
   font-size: 80px;
 }
 
+.footer {
+  background-color: #2b2b2b;
+  color: white;
+  padding: 25px;
+  height: 150px;
+}
+
+.footer p {
+  font-size: 10pt;
+}
+
+.footer a, .footer span {
+  color: #fe9b35;
+  text-transform: uppercase;
+}
+
+.footer a:hover {
+  text-decoration: none;
+  color: #9c5d1b;
+}
+
+.footer br {
+  display: none;
+}
 @media only screen and (min-width: 768px) {
   #planetRep {
     width: 60%;
@@ -216,4 +245,19 @@ display: none;
     flex: 1 0 100px;
   }
 
+  .jumbotron br {
+    display: none;
+  }
+
+  .btn-group {
+    flex-flow: row nowrap;
+  }
+
+  .footer p {
+    font-size: 12pt;
+  }
+
+  .footer br {
+    display: block;
+  }
 }
