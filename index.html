@@ -8,20 +8,22 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="master.css">
 <link rel="stylesheet" href="modal.css">
+<link rel="stylesheet" href="tooltips.css">
+<link rel="icon" href="img/favo/clogo.png">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
-<div class="jumbotron" style="padding-left: 15px; padding-right: 15px; background-color: #276884; color: white;">
+<div class="jumbotron" style="padding-left: 15px; padding-right: 15px; background-color: #2b2b2b; color: white;">
 <h1 class="display">CMCN's Exoplanet Catalog</h1>
 <br>
 <div class="btn-group" id="bgroup">
 <a href="#" class="btn btn-default active" id="allButton">All</a>
-<a href="#" class="btn btn-primary" id="gasGiantButton">Gas Giant</a>
-<a href="#" class="btn btn-primary" id="neptuneLikeButton">Neptune-like</a>
-<a href="#" class="btn btn-primary" id="superEarthButton">Super Earth</a>
-<a href="#" class="btn btn-primary" id="terrestrialButton">Terrestrial</a>
-<a href="#" class="btn btn-primary" id="unknownButton">Unknown</a>
+<a href="#" class="btn btn-danger" id="gasGiantButton">Gas Giant</a>
+<a href="#" class="btn btn-danger" id="neptuneLikeButton">Neptune-like</a>
+<a href="#" class="btn btn-danger" id="superEarthButton">Super Earth</a>
+<a href="#" class="btn btn-danger" id="terrestrialButton">Terrestrial</a>
+<a href="#" class="btn btn-danger" id="unknownButton">Unknown</a>
 </div>
 </div>
 <div id="content">
@@ -115,7 +117,18 @@
 <br>
 <p>Information was gathered from a variety of sources including but not limited to: <a href="https://exoplanets.nasa.gov/">exoplanets.nasa.gov</a>, <a href="https://exoplanetarchive.ipac.caltech.edu/">exoplanetarchive.ipac.caltech.edu</a>, <a href="https://www.universeguide.com/">www.universeguide.com/</a></p>
 <br>
-<p class="version-level">Version: <span>Pre-Alpha | 0.0.03 </span>
+<div class="tooltips">Pre-Alpha | 0.0.04
+  <div class="tooltiptext">
+    <h3>Whats New In Pre-Alpha Update 4?</h3>
+    <p><span style="color: #32bce8">New Planets: </span> 5 New Planets from CoRot-24 c to YZ Ceti d</p>
+    <p><span style="color: #32bce8">Updated UI: </span> Crisper theme with imported fonts and a new 'Favicon'</p>
+    <p style="color: red; text-transform: uppercase">New Developer Tools</p>
+
+    <h3>What to expect in Update 5?</h3>
+    <p><span style="color: #32bce8">New Planets: </span>10-20 New planets of all types specifically more Gas Giants</p>
+    <p><span style="color: #32bce8">Expanded UI: </span>As we expand our database we hope to make specific info more easily available (ex: A search bar)</p>
+  </div>
+</div>
 </div>
 <script src="buttons.js"></script>
 <script src="planets.js"></script>

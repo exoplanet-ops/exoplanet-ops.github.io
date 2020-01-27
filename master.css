@@ -1,3 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Quicksand);
+
 .row {
 padding-left: 10px;
 padding-right: 10px;
@@ -237,6 +240,23 @@ display: none;
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+.caption {
+  font-family: 'Quicksand';
+}
+
+.caption h2 {
+ font-family: 'Bebas Neue';
+}
+
+body {
+background-color: #bdbdbd;
+}
+
+.caption p {
+  max-height: 53px;
+  overflow-y: scroll;
 }
 
 @media only screen and (min-width: 768px) {

@@ -1200,6 +1200,8 @@ var devTools = false;
 document.addEventListener("keydown", function(event) {
 	if(event.key=="Z" && event.shiftKey && !devTools) {
 		console.log("Developer Tools Enabled");
+    console.log("Current number of entries: " + exo.length)
+    console.log("Commands: \n Shift + L - Run copy analysis")
 		devTools = true;
 	} else if (event.key=="Z" && event.shiftKey) {
 		console.log("Developer Tools Disabled");
@@ -1213,16 +1215,16 @@ document.addEventListener("keydown", function(event) {
 		for (var i=0; i<exo.length; i++) {
 			for (var j=0; j<exo.length; j++) {
 				if (exo[i].name == exo[j].name && j>i) {
-					var finMessage = "Found matching planets: " + exo[i].name + " at indices " + i + " and " + j;
+					var finMessage = "Found matching planets: " + exo[i].name + " at indices " + i + " and " + j + ".";
 					match = true;
 					break;
 				}
 			}
 		}
 		if (!match) {
-			var finMessage = "No matches observed; OK to proceed";
+			var finMessage = "No matches observed; OK to proceed.";
 		}
-		console.log("Program finished!");
+		console.log("Program finished.");
 		console.log(finMessage);
 	}
 });
@@ -1276,7 +1278,7 @@ for (var i = 0; i < exo.length; i++) {
 	btn2.target="_blank";
 	pic.src=exo[i].source;
 	btn1.classList.add("btn");
-	btn1.classList.add("btn-primary");
+	btn1.classList.add("btn-danger");
 	btn2.classList.add("btn");
 	btn2.classList.add("btn-default");
 	pic.style.borderRadius="10px";
