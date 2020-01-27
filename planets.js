@@ -948,7 +948,7 @@ starMass: 1.03,
 starRadius: 1.23},
 //43
 {name: "47 Ursae Majoris c",
-source: "img/47UrsaeMajorisc.JPG",
+source: "img/47ursaemajorisc.JPG",
 type: "Gas-Giant",
 loadName: "gas-giant",
 desc: "47 Ursae Majoris c is a gas giant exoplanet that orbits a G-type star. Its mass is 0.54 Jupiters, it takes 6.6 years to complete one orbit of its star, and is 3.6 AU from its star. Its discovery was announced in 2001.",
