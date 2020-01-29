@@ -1,5 +1,5 @@
 var curr;
-const exo = [
+let exo = [
 //0
 {name: "11 Comae Berenices b",
 source: "img/11comaeberenicesb.JPG",
@@ -1167,9 +1167,313 @@ starName: "YZ Ceti",
 starMass: 0.13,
 starRadius: 0.17},
 //53
-
-
-
+{name: "51 Eridani b",
+source: "img/51eridanib.JPG",
+type: "Gas Giant",
+loadName: "gas-giant",
+desc: "51 Eridani b is a gas giant exoplanet that orbits a F-type star. Its mass is 2 Jupiters, it takes 32 years to complete one orbit of its star, and is 12 AU from its star. Its discovery was announced in 2015.",
+link: "https://exoplanets.nasa.gov/exoplanet-catalog/7109/51-eridani-b/",
+marker: "51eridanib",
+date: 2015,
+mass: 2,
+pRadius: 1.19,
+massRadUnits: "Jupiter",
+oRadius: 12.0,
+eccentricity: 0.45,
+oPeriod: 32,
+oPeriodUnits: "years",
+detectionMethod: "Direct Imaging",
+star: "F-type",
+distance: 96,
+starName: "51 Eridani",
+starMass: 1.75,
+starRadius: 1.56},
+//54
+{name: "51 Pegasi b",
+source: "img/51pegasib.JPG",
+type: "Gas Giant",
+loadName: "gas-giant",
+desc: "51 Pegasi b is a gas giant exoplanet that orbits a G-type star. Its mass is 0.46 Jupiters, it takes 4.2 days to complete one orbit of its star, and is 0.0527 AU from its star. Its discovery was announced in 1995.",
+link: "https://exoplanets.nasa.gov/exoplanet-catalog/7109/51-pegasi-b/",
+marker: "51pegasib",
+date: 1995,
+mass: 0.46,
+pRadius: 1.27,
+massRadUnits: "Jupiter",
+oRadius: 0.0527,
+eccentricity: 0.01,
+oPeriod: 4.2,
+oPeriodUnits: "days",
+detectionMethod: "Radial Velocity",
+star: "G-type",
+distance: 50,
+starName: "51 Pegasi",
+starMass: 1.12,
+starRadius: 1.2},
+//55
+{name: "55 Cancri b",
+source: "img/55cancrib.JPG",
+type: "Gas Giant",
+loadName: "gas-giant",
+desc: "55 Cancri b is a gas giant exoplanet that orbits a G-type star. Its mass is 0.8306 Jupiters, it takes 14.7 days to complete one orbit of its star, and is 0.115227 AU from its star. Its discovery was announced in 1996.",
+link: "https://exoplanets.nasa.gov/exoplanet-catalog/7002/55-cancri-b/",
+marker: "55cancrib",
+date: 1996,
+mass: 0.8306,
+pRadius: 1.24,
+massRadUnits: "Jupiter",
+oRadius: 0.115227,
+eccentricity: 0.0,
+oPeriod: 14.7,
+oPeriodUnits: "days",
+detectionMethod: "Radial Velocity",
+star: "G-type",
+distance: 41,
+starName: "51 Pegasi",
+starMass: 0.91,
+starRadius: 0.91},
+//56
+{name: "55 Cancri c",
+source: "img/55cancric.JPG",
+type: "Gas Giant",
+loadName: "gas-giant",
+desc: "55 Cancri c is a gas giant exoplanet that orbits a G-type star. Its mass is 0.1714 Jupiters, it takes 44.4 days to complete one orbit of its star, and is 0.241376 AU from its star. Its discovery was announced in 2004.",
+link: "https://exoplanets.nasa.gov/exoplanet-catalog/7003/55-cancri-c/",
+marker: "55cancric",
+date: 2004,
+mass: 0.1714,
+pRadius: 0.76,
+massRadUnits: "Jupiter",
+oRadius: 0.241376,
+eccentricity: 0.02,
+oPeriod: 44.4,
+oPeriodUnits: "days",
+detectionMethod: "Radial Velocity",
+star: "G-type",
+distance: 41,
+starName: "51 Pegasi",
+starMass: 0.91,
+starRadius: 0.91},
+//57
+{name: "55 Cancri d",
+source: "img/55cancrid.JPG",
+type: "Gas Giant",
+loadName: "gas-giant",
+desc: "55 Cancri d is a gas giant exoplanet that orbits a G-type star. Its mass is 3.878 Jupiters, it takes 13.2 years to complete one orbit of its star, and is 5.503 AU from its star. Its discovery was announced in 2002.",
+link: "https://exoplanets.nasa.gov/exoplanet-catalog/7004/55-cancri-d/",
+marker: "55cancrid",
+date: 2002,
+mass: 3.878,
+pRadius: 1.16,
+massRadUnits: "Jupiter",
+oRadius: 5.503,
+eccentricity: 0.02,
+oPeriod: 13.2,
+oPeriodUnits: "years",
+detectionMethod: "Radial Velocity",
+star: "G-type",
+distance: 41,
+starName: "51 Pegasi",
+starMass: 0.91,
+starRadius: 0.91},
+//58
+{name: "55 Cancri f",
+source: "img/55cancrif.JPG",
+type: "Gas Giant",
+loadName: "gas-giant",
+desc: "55 Cancri f is a gas giant exoplanet that orbits a G-type star. Its mass is 0.141 Jupiters, it takes 262 days to complete one orbit of its star, and is 0.788 AU from its star. Its discovery was announced in 2007.",
+link: "https://exoplanets.nasa.gov/exoplanet-catalog/7006/55-cancri-f/",
+marker: "55cancrif",
+date: 2007,
+mass: 0.141,
+pRadius: 0.677,
+massRadUnits: "Jupiter",
+oRadius: 0.788,
+eccentricity: 0.31,
+oPeriod: 262,
+oPeriodUnits: "days",
+detectionMethod: "Radial Velocity",
+star: "G-type",
+distance: 41,
+starName: "51 Pegasi",
+starMass: 0.91,
+starRadius: 0.91},
+//59
+{name: "6 Lyncis b",
+source: "img/6lyncisb.JPG",
+type: "Gas Giant",
+loadName: "gas-giant",
+desc: "6 Lyncis b is a gas giant exoplanet that orbits a K-type star. Its mass is 2.01 Jupiters, it takes 2.6 years to complete one orbit of its star, and is 2.11 AU from its star. Its discovery was announced in 2008.",
+link: "https://exoplanets.nasa.gov/exoplanet-catalog/6986/6-lyncis-b/",
+marker: "6lyncisb",
+date: 2008,
+mass: 2.01,
+pRadius: 1.19,
+massRadUnits: "Jupiter",
+oRadius: 2.11,
+eccentricity: 0.07,
+oPeriod: 2.6,
+oPeriodUnits: "years",
+detectionMethod: "Radial Velocity",
+star: "K-type",
+distance: 179,
+starName: "6 Lyncis",
+starMass: 1.44,
+starRadius: 5.2},
+//60
+{name: "70 Virginis b",
+source: "img/70virginisb.JPG",
+type: "Gas Giant",
+loadName: "gas-giant",
+desc: "70 Virginis b is a gas giant exoplanet that orbits a G-type star. Its mass is 7.49 Jupiters, it takes 116.7 days to complete one orbit of its star, and is 0.481 AU from its star. Its discovery was announced in 1996.",
+link: "https://exoplanets.nasa.gov/exoplanet-catalog/7010/70-virginis-b/",
+marker: "70virginisb",
+date: 1996,
+mass: 7.49,
+pRadius: 1.13,
+massRadUnits: "Jupiter",
+oRadius: 0.481,
+eccentricity: 0.4,
+oPeriod: 116.7,
+oPeriodUnits: "days",
+detectionMethod: "Radial Velocity",
+star: "G-type",
+distance: 58,
+starName: "70 Virinis",
+starMass: 1.09,
+starRadius: 1.89},
+//61
+{name: "75 Ceti b",
+source: "img/75cetib.JPG",
+type: "Gas Giant",
+loadName: "gas-giant",
+desc: "75 Ceti b is a gas giant exoplanet that orbits a K-type star. Its mass is 3 Jupiters, it takes 1.9 years to complete one orbit of its star, and is 2.1 AU from its star. Its discovery was announced in 2012.",
+link: "https://exoplanets.nasa.gov/exoplanet-catalog/7011/75-ceti-b/",
+marker: "70cetib",
+date: 2012,
+mass: 3,
+pRadius: 1.17,
+massRadUnits: "Jupiter",
+oRadius: 2.1,
+eccentricity: 0.12,
+oPeriod: 1.9,
+oPeriodUnits: "years",
+detectionMethod: "Radial Velocity",
+star: "K-type",
+distance: 271,
+starName: "75 Ceti",
+starMass: 2.49,
+starRadius: 10.5},
+//62
+{name: "7 Canis Majoris b",
+source: "img/7canismajorisb.JPG",
+type: "Gas Giant",
+loadName: "gas-giant",
+desc: "7 Canis Majoris b is a gas giant exoplanet that orbits a K-type star. Its mass is 1.85 Jupiters, it takes 2 years to complete one orbit of its star, and is 1.758 AU from its star. Its discovery was announced in 2011.",
+link: "https://exoplanets.nasa.gov/exoplanet-catalog/6987/7-canis-majoris-b/",
+marker: "7canismajorisb",
+date: 2011,
+mass: 1.85,
+pRadius: 1.2,
+massRadUnits: "Jupiter",
+oRadius: 1.758,
+eccentricity: 0.06,
+oPeriod: 2,
+oPeriodUnits: "years",
+detectionMethod: "Radial Velocity",
+star: "K-type",
+distance: 65,
+starName: "7 Canis Majoris",
+starMass: 1.34,
+starRadius: 4.87},
+//63
+{name: "7 Canis Majoris c",
+source: "img/7canismajorisc.JPG",
+type: "Gas Giant",
+loadName: "gas-giant",
+desc: "7 Canis Majoris c is a gas giant exoplanet that orbits a K-type star. Its mass is 0.87 Jupiters, it takes 2.7 years to complete one orbit of its star, and is 2.153 AU from its star. Its discovery was announced in 2019.",
+link: "https://exoplanets.nasa.gov/exoplanet-catalog/7505/7-canis-majoris-c/",
+marker: "7canismajorisc",
+date: 2019,
+mass: 0.87,
+pRadius: 1.24,
+massRadUnits: "Jupiter",
+oRadius: 2.153,
+eccentricity: 0.08,
+oPeriod: 2.7,
+oPeriodUnits: "years",
+detectionMethod: "Radial Velocity",
+star: "K-type",
+distance: 65,
+starName: "7 Canis Majoris",
+starMass: 1.34,
+starRadius: 4.87},
+//64
+{name: "81 Ceti b",
+source: "img/81cetib.JPG",
+type: "Gas Giant",
+loadName: "gas-giant",
+desc: "81 Ceti b is a gas giant exoplanet that orbits a K-type star. Its mass is 5.3 Jupiters, it takes 2.6 years to complete one orbit of its star, and is 2.5 AU from its star. Its discovery was announced in 2008.",
+link: "https://exoplanets.nasa.gov/exoplanet-catalog/7012/81-ceti-b/",
+marker: "81cetib",
+date: 2008,
+mass: 5.3,
+pRadius: 1.14,
+massRadUnits: "Jupiter",
+oRadius: 2.5,
+eccentricity: 0.21,
+oPeriod: 2.6,
+oPeriodUnits: "years",
+detectionMethod: "Radial Velocity",
+star: "K-type",
+distance: 331,
+starName: "81 Ceti",
+starMass: 2.4,
+starRadius: 11.0},
+//65
+{name: "8 Ursae Minoris b",
+source: "img/8ursaeminorisb.JPG",
+type: "Gas Giant",
+loadName: "gas-giant",
+desc: "8 Ursae Minoris b is a gas giant exoplanet that orbits a K-type star. Its mass is 1.31 Jupiters, it takes 93.4 days to complete one orbit of its star, and is 0.49 AU from its star. Its discovery was announced in 2015.",
+link: "https://exoplanets.nasa.gov/exoplanet-catalog/7100/8-ursae-minoris-b/",
+marker: "8ursaeminorisb",
+date: 2015,
+mass: 1.31,
+pRadius: 1.22,
+massRadUnits: "Jupiter",
+oRadius: 0.49,
+eccentricity: 0.06,
+oPeriod: 93.4,
+oPeriodUnits: "days",
+detectionMethod: "Radial Velocity",
+star: "K-type",
+distance: 533,
+starName: "8 Ursae Minoris",
+starMass: 1.44,
+starRadius: 10.3},
+//66
+{name: "91 Aquarii b",
+source: "img/91aquariib.JPG",
+type: "Gas Giant",
+loadName: "gas-giant",
+desc: "91 Aquarii b is a gas giant exoplanet that orbits a K-type star. Its mass is 3.2 Jupiters, it takes 181.4 days to complete one orbit of its star, and is 0.7 AU from its star. Its discovery was announced in 2013.",
+link: "https://exoplanets.nasa.gov/exoplanet-catalog/7013/91-aquarii-b/",
+marker: "91aquariib",
+date: 2013,
+mass: 3.2,
+pRadius: 1.17,
+massRadUnits: "Jupiter",
+oRadius: 0.7,
+eccentricity: 0.03,
+oPeriod: 181.4,
+oPeriodUnits: "days",
+detectionMethod: "Radial Velocity",
+star: "K-type",
+distance: 144,
+starName: "91 Aquarii",
+starMass: 1.4,
+starRadius: 11.0},
 //Template Dataset
 /*{name: "",
 source: "",
@@ -1196,6 +1500,8 @@ starRadius: },*/
 ]
 
 var devTools = false;
+var search = document.getElementById("planetSearch");
+let typeSelected = "all"
 
 document.addEventListener("keydown", function(event) {
 	if(event.key=="Z" && event.shiftKey && !devTools) {
@@ -1229,63 +1535,72 @@ document.addEventListener("keydown", function(event) {
 	}
 });
 
-for (var i = 0; i < exo.length; i++) {
-	var con = document.getElementById("content");
-	var col = document.createElement("div");
-	var thumb = document.createElement("div");
-	var cap = document.createElement("div");
-	var pic = document.createElement("IMG");
-	var text = document.createTextNode(exo[i].desc);
-	var plname = document.createTextNode(exo[i].name);
-	var bname1 = document.createTextNode("Learn More");
-	var bname2 = document.createTextNode("NASA Link");
-	var shed = document.createElement("h2");
-	var para = document.createElement("P");
-	var btn1 = document.createElement("BUTTON");
-	var btn2 = document.createElement("A");
-	var bblock=document.createElement("div");
-	var breaks = document.createElement("br");
+exo = exo.reverse();
+loadSearch("");
+newDec();
 
-	shed.appendChild(plname);
-	para.appendChild(text);
-	btn1.appendChild(bname1);
-	btn2.appendChild(bname2);
-	bblock.appendChild(btn1);
-	bblock.appendChild(btn2);
+function loadSearch(z) {
+  for (var i = 0; i < exo.length; i++) {
+    if (exo[i].name.toLowerCase().includes(z) && (exo[i].loadName == typeSelected || typeSelected == "all")) {
+	   var con = document.getElementById("content");
+	   var col = document.createElement("div");
+	   var thumb = document.createElement("div");
+	   var cap = document.createElement("div");
+	   var pic = document.createElement("IMG");
+	   var text = document.createTextNode(exo[i].desc);
+	   var plname = document.createTextNode(exo[i].name);
+	   var bname1 = document.createTextNode("Learn More");
+	   var bname2 = document.createTextNode("NASA Link");
+	   var shed = document.createElement("h2");
+	   var para = document.createElement("P");
+	   var btn1 = document.createElement("BUTTON");
+	   var btn2 = document.createElement("A");
+	   var bblock=document.createElement("div");
+	   var breaks = document.createElement("br");
 
-	cap.appendChild(shed);
-	cap.appendChild(para);
-	cap.appendChild(breaks);
-	cap.appendChild(bblock);
+	   shed.appendChild(plname);
+	   para.appendChild(text);
+	   btn1.appendChild(bname1);
+	   btn2.appendChild(bname2);
+	   bblock.appendChild(btn1);
+	   bblock.appendChild(btn2);
 
-	thumb.appendChild(pic);
-	thumb.appendChild(cap);
+	   cap.appendChild(shed);
+	   cap.appendChild(para);
+	   cap.appendChild(breaks);
+	   cap.appendChild(bblock);
 
-	col.appendChild(thumb);
+	   thumb.appendChild(pic);
+	   thumb.appendChild(cap);
 
-	con.appendChild(col);
+	   col.appendChild(thumb);
 
-	col.classList.add("col-sm-5");
-	col.classList.add("col-md-3");
-	col.classList.add("col-active");
-	col.classList.add(exo[i].loadName);
-	col.classList.add("planet-box");
-	thumb.classList.add("thumbnail");
-	cap.classList.add("caption");
-	btn1.classList.add("modal-trigger");
-	btn1.classList.add(exo[i].marker);
-	btn2.href=exo[i].link;
-	btn2.target="_blank";
-	pic.src=exo[i].source;
-	btn1.classList.add("btn");
-	btn1.classList.add("btn-danger");
-	btn2.classList.add("btn");
-	btn2.classList.add("btn-default");
-	pic.style.borderRadius="10px";
-	bblock.classList.add("btn-group")
+	   con.appendChild(col);
+
+	   col.classList.add("col-sm-5");
+	   col.classList.add("col-md-3");
+	   col.classList.add("col-active");
+	   col.classList.add(exo[i].loadName);
+	   col.classList.add("planet-box");
+	   thumb.classList.add("thumbnail");
+	   cap.classList.add("caption");
+	   btn1.classList.add("modal-trigger");
+	   btn1.classList.add(exo[i].marker);
+	   btn2.href=exo[i].link;
+	   btn2.target="_blank";
+	   pic.src=exo[i].source;
+	   btn1.classList.add("btn");
+	   btn1.classList.add("btn-danger");
+	   btn2.classList.add("btn");
+	   btn2.classList.add("btn-default");
+	   pic.style.borderRadius="10px";
+	   bblock.classList.add("btn-group")
+   }
+ }
 }
 
 
+function newDec() {
 var mdb = document.getElementsByClassName("modal-trigger");
 var header = document.getElementById("planetName");
 var paragraph = document.getElementById("modalP");
@@ -1315,9 +1630,12 @@ var dis = document.getElementById("distanceFrom");
 var cr;
 for (var i = 0; i < mdb.length; i++) {
 	mdb[i].addEventListener("click", function() {
+    var modal = document.getElementById("modal-box");
+    modal.style.display = "block";
 		for (var j = 0; j < exo.length; j++) {
 			if (this.classList.contains(exo[j].marker)) {
 				cr = j;
+        console.log("Debug2")
 				break;
 			}
 		}
@@ -1414,3 +1732,75 @@ for (var i = 0; i < mdb.length; i++) {
 		}
 	});
 }
+}
+
+let boxes = document.getElementsByClassName("planet-box");
+var fullContent = document.getElementById("content");
+
+function removeAll() {
+  fullContent.innerHTML = "";
+  console.log("Elements Cleared")
+}
+
+
+search.addEventListener("keyup", function() {
+  removeAll();
+  loadSearch(search.value.toLowerCase());
+  if(boxes.length < 1) {
+    console.log("No results")
+    var nada = document.createTextNode("Nothing to Show");
+    var nadaCon = document.createElement("div");
+    nadaCon.classList.add("nada-content")
+    nadaCon.appendChild(nada);
+    fullContent.appendChild(nadaCon);
+  }
+});
+
+var gg2 = document.getElementById("gasGiantButton");
+var nl2 = document.getElementById("neptuneLikeButton");
+var se2 = document.getElementById("superEarthButton");
+var tr2 = document.getElementById("terrestrialButton");
+var uk2 = document.getElementById("unknownButton");
+var al2 = document.getElementById("allButton");
+
+al2.addEventListener("click", function() {
+  removeAll();
+  typeSelected = "all";
+  loadSearch(search.value.toLowerCase());
+  newDec();
+});
+
+gg2.addEventListener("click", function() {
+  removeAll();
+  typeSelected = "gas-giant";
+  loadSearch(search.value.toLowerCase());
+  newDec();
+});
+
+nl2.addEventListener("click", function() {
+  removeAll();
+  typeSelected = "neptune-like";
+  loadSearch(search.value.toLowerCase());
+  newDec();
+});
+
+se2.addEventListener("click", function() {
+  removeAll();
+  typeSelected = "super-earth";
+  loadSearch(search.value.toLowerCase());
+  newDec();
+});
+
+tr2.addEventListener("click", function() {
+  removeAll();
+  typeSelected = "terrestrial";
+  loadSearch(search.value.toLowerCase());
+  newDec();
+});
+
+uk2.addEventListener("click", function() {
+  removeAll();
+  typeSelected = "unknown";
+  loadSearch(search.value.toLowerCase());
+  newDec();
+});
