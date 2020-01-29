@@ -1381,6 +1381,43 @@ star: "K-type",
 distance: 3095,
 starMass: 2.12,
 starRadius: 19.17},
+//76
+{name: "BD+14 4559 b",
+type: "Gas Giant",
+desc: "BD+14 4559 b is a gas giant exoplanet that orbits a K-type star. Its mass is 1.04 Jupiters, it takes 268.9 days to complete one orbit of its star, and is 0.78 AU from its star. Its discovery was announced in 2009.",
+link: "https://exoplanets.nasa.gov/exoplanet-catalog/7075/bd14-4559-b/",
+date: 2009,
+mass: 1.04,
+pRadius: 1.23,
+massRadUnits: "Jupiter",
+oRadius: 0.78,
+eccentricity: 0.29,
+oPeriod: 268.9,
+oPeriodUnits: "days",
+detectionMethod: "Radial Velocity",
+star: "K-type",
+distance: 161,
+starMass: 0.49,
+starRadius: 0.86},
+//77
+{name: "BD+15 2375 b",
+type: "Gas Giant",
+desc: "BD+15 2375 b is a gas giant exoplanet that orbits a K-type star. Its mass is 1.061 Jupiters, it takes 153.2 days to complete one orbit of its star, and is 0.576 AU from its star. Its discovery was announced in 2016.",
+link: "https://exoplanets.nasa.gov/exoplanet-catalog/7025/bd15-2375-b/",
+date: 2016,
+mass: 1.061,
+pRadius: 1.23,
+massRadUnits: "Jupiter",
+oRadius: 0.576,
+eccentricity: 0.0,
+oPeriod: 153.2,
+oPeriodUnits: "days",
+detectionMethod: "Radial Velocity",
+star: "K-type",
+distance: 2525,
+starMass: 1.09,
+starRadius: 8.95,
+verified: true},
 
 //Template Dataset
 /*{name: "",
@@ -1417,6 +1454,7 @@ for (var i = 0; i < exo.length; i++) {
   exo[i].loadName = vmma;
   var zmma = exo[i].name.substring(0, exo[i].name.length - 1);
   exo[i].starName = zmma;
+  exo[i].contentNum = i;
 }
 
 var devTools = false;
@@ -1752,4 +1790,79 @@ uk2.addEventListener("click", function() {
   loadSearch(search.value.toLowerCase());
   newDec();
   lessContent();
+});
+
+var droop = document.getElementById("dropdown");
+
+droop.addEventListener("change", function() {
+	if (droop.value == "dda") {
+		exo = exo.sort(function (a, b) {
+  		return a.date - b.date;
+		});
+		removeAll();
+		loadSearch(search.value.toLowerCase());
+		newDec();
+  		lessContent();
+	} else if (droop.value == "ddd") {
+		exo = exo.sort(function (a, b) {
+  		return a.date - b.date;
+		});
+		exo = exo.reverse();
+		removeAll();
+		loadSearch(search.value.toLowerCase());
+		newDec();
+  		lessContent();
+	} else if (droop.value == "nasc") {
+		exo.sort(function(a, b) {
+  		var nameA = a.name.toUpperCase(); // ignore upper and lowercase
+  		var nameB = b.name.toUpperCase(); // ignore upper and lowercase
+  		if (nameA < nameB) {
+    		return -1;
+  		}
+  		if (nameA > nameB) {
+    		return 1;
+  		}
+  		// names must be equal
+  		return 0;
+		});
+		removeAll();
+		loadSearch(search.value.toLowerCase());
+		newDec();
+  		lessContent();
+	} else if (droop.value == "ndesc") { 
+		exo.sort(function(a, b) {
+  		var nameA = a.name.toUpperCase(); // ignore upper and lowercase
+  		var nameB = b.name.toUpperCase(); // ignore upper and lowercase
+  		if (nameA < nameB) {
+    		return -1;
+  		}
+  		if (nameA > nameB) {
+    		return 1;
+  		}
+  		// names must be equal
+  		return 0;
+		});
+		exo=exo.reverse();
+		removeAll();
+		loadSearch(search.value.toLowerCase());
+		newDec();
+  		lessContent();
+	} else if (droop.value == "ncon") {
+		exo = exo.sort(function (a, b) {
+  		return a.contentNum - b.contentNum;
+		});
+		exo=exo.reverse();
+		removeAll();
+		loadSearch(search.value.toLowerCase());
+		newDec();
+  		lessContent();
+	} else if (droop.value == "ocon") {
+		exo = exo.sort(function (a, b) {
+  		return a.contentNum - b.contentNum;
+		});
+		removeAll();
+		loadSearch(search.value.toLowerCase());
+		newDec();
+  		lessContent();
+	}
 });
