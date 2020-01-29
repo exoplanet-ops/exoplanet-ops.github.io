@@ -1382,7 +1382,7 @@ distance: 3095,
 starMass: 2.12,
 starRadius: 19.17},
 //76
-{name: "BD+14 4559 b",
+/*{name: "BD+14 4559 b",
 type: "Gas Giant",
 desc: "BD+14 4559 b is a gas giant exoplanet that orbits a K-type star. Its mass is 1.04 Jupiters, it takes 268.9 days to complete one orbit of its star, and is 0.78 AU from its star. Its discovery was announced in 2009.",
 link: "https://exoplanets.nasa.gov/exoplanet-catalog/7075/bd14-4559-b/",
@@ -1417,31 +1417,7 @@ star: "K-type",
 distance: 2525,
 starMass: 1.09,
 starRadius: 8.95,
-verified: true},
-
-//Template Dataset
-/*{name: "",
-source: "",
-type: "",
-loadName: "",
-desc: "",
-link: "",
-marker: "",
-date: ,
-mass: ,
-pRadius: ,
-massRadUnits: "",
-oRadius: ,
-eccentricity: ,
-oPeriod: ,
-oPeriodUnits: "",
-detectionMethod: "",
-star: "",
-distance: ,
-starName: "",
-starMass: ,
-starRadius: },*/
-
+verified: true},*/
 ]
 
 for (var i = 0; i < exo.length; i++) {
