@@ -1459,7 +1459,7 @@ starRadius: 0.69},
 //80
 {name: "BD+20 2457 b",
 type: "Gas Giant",
-desc: "BD-17 63 b is a gas giant exoplanet that orbits a K-type star. Its mass is 5.1 Jupiters, it takes 1.8 years to complete one orbit of its star, and is 1.34 AU from its star. Its discovery was announced in 2008.",
+desc: "BD+20 2457 b is a gas giant exoplanet that orbits a K-type star. Its mass is 55.59 Jupiters, it takes 379.6 days to complete one orbit of its star, and is 1.05 AU from its star. Its discovery was announced in 2009.",
 link: "https://exoplanets.nasa.gov/exoplanet-catalog/7078/bd20-2457-b/",
 date: 2009,
 mass: 55.59,
