@@ -1,4 +1,5 @@
 var curr;
+var firstLoad = true;
 let exo = [
 //0
 {name: "11 Comae Berenices b",
@@ -231,7 +232,7 @@ oPeriod: 4,
 oPeriodUnits: "days",
 detectionMethod: "Transit",
 star: "K-type",
-distance: "",
+distance: "846",
 starMass: 0.61,
 starRadius: 0.63},
 //13
@@ -469,7 +470,7 @@ eccentricity: 0.1,
 oPeriod: 8,
 oPeriodUnits: "days",
 detectionMethod: "Transit",
-star: "K-Type",
+star: "K-type",
 distance: 194,
 starMass: 0.74,
 starRadius: 0.66,
@@ -488,7 +489,7 @@ eccentricity: 0.0,
 oPeriod: 2.1,
 oPeriodUnits: "days",
 detectionMethod: "Transit",
-star: "K-Type",
+star: "K-type",
 distance: 250,
 starMass: 0.74,
 starRadius: 0.71,
@@ -1382,7 +1383,7 @@ distance: 3095,
 starMass: 2.12,
 starRadius: 19.17},
 //76
-/*{name: "BD+14 4559 b",
+{name: "BD+14 4559 b",
 type: "Gas Giant",
 desc: "BD+14 4559 b is a gas giant exoplanet that orbits a K-type star. Its mass is 1.04 Jupiters, it takes 268.9 days to complete one orbit of its star, and is 0.78 AU from its star. Its discovery was announced in 2009.",
 link: "https://exoplanets.nasa.gov/exoplanet-catalog/7075/bd14-4559-b/",
@@ -1417,9 +1418,66 @@ star: "K-type",
 distance: 2525,
 starMass: 1.09,
 starRadius: 8.95,
-verified: true},*/
+verified: true},
+//78
+{name: "BD+15 2940 b",
+type: "Gas Giant",
+desc: "BD+15 2940 b is a gas giant exoplanet that orbits a K-type star. Its mass is 1.11 Jupiters, it takes 137.5 days to complete one orbit of its star, and is 0.539 AU from its star. Its discovery was announced in 2013.",
+link: "https://exoplanets.nasa.gov/exoplanet-catalog/7076/bd15-2940-b/",
+date: 2013,
+mass: 1.1,
+pRadius: 1.23,
+massRadUnits: "Jupiter",
+oRadius: 0.539,
+eccentricity: 0.26,
+oPeriod: 137.5,
+oPeriodUnits: "days",
+detectionMethod: "Radial Velocity",
+star: "K-type",
+distance: 1408,
+starMass: 1.1,
+starRadius: 14.7,
+verified: true},
+//79
+{name: "BD-17 63 b",
+type: "Gas Giant",
+desc: "BD-17 63 b is a gas giant exoplanet that orbits a K-type star. Its mass is 5.1 Jupiters, it takes 1.8 years to complete one orbit of its star, and is 1.34 AU from its star. Its discovery was announced in 2008.",
+link: "https://exoplanets.nasa.gov/exoplanet-catalog/7067/bd-17-63-b/",
+date: 2008,
+mass: 5.1,
+pRadius: 1.15,
+massRadUnits: "Jupiter",
+oRadius: 1.34,
+eccentricity: 0.54,
+oPeriod: 1.8,
+oPeriodUnits: "years",
+detectionMethod: "Radial Velocity",
+star: "K-type",
+distance: 112,
+starMass: 0.74,
+starRadius: 0.69},
+//80
+{name: "BD+20 2457 b",
+type: "Gas Giant",
+desc: "BD-17 63 b is a gas giant exoplanet that orbits a K-type star. Its mass is 5.1 Jupiters, it takes 1.8 years to complete one orbit of its star, and is 1.34 AU from its star. Its discovery was announced in 2008.",
+link: "https://exoplanets.nasa.gov/exoplanet-catalog/7078/bd20-2457-b/",
+date: 2009,
+mass: 55.59,
+pRadius: 1.03,
+massRadUnits: "Jupiter",
+oRadius: 1.05,
+eccentricity: 0.15,
+oPeriod: 379.6,
+oPeriodUnits: "days",
+detectionMethod: "Radial Velocity",
+star: "K-type",
+distance: 112,
+starMass: 10.83,
+starRadius: 71.02,
+verified: true},
 ]
 
+//Text Algorithms
 for (var i = 0; i < exo.length; i++) {
   var xmma = exo[i].name.toLowerCase();
   xmma = xmma.replace(/\s/g, "");
@@ -1431,11 +1489,29 @@ for (var i = 0; i < exo.length; i++) {
   var zmma = exo[i].name.substring(0, exo[i].name.length - 1);
   exo[i].starName = zmma;
   exo[i].contentNum = i;
+  if (exo[i].oPeriodUnits=="years") {
+    exo[i].days = exo[i].oPeriod * 365;
+  } else if (exo[i].oPeriodUnits=="days") {
+    exo[i].days = exo[i].oPeriod;
+  } else {
+    exo[i].days = 0;
+  }
+  if (exo[i].massRadUnits == "Jupiter") {
+    exo[i].actMass = exo[i].mass * 317.8;
+    exo[i].actRad = exo[i].pRadius * 43441;
+  } else if (exo[i].massRadUnits == "Earth"){
+    exo[i].actMass = exo[i].mass;
+    exo[i].actRad = exo[i].pRadius * 3958.8;
+  } else {
+    exo[i].actMass = 0;
+    exo[i].actRad = 0;
+  }
 }
 
 var devTools = false;
 var search = document.getElementById("planetSearch");
 let typeSelected = "all"
+let sTypeSelected = "all"
 
 document.addEventListener("keydown", function(event) {
 	if(event.key=="Z" && event.shiftKey && !devTools) {
@@ -1488,15 +1564,22 @@ document.addEventListener("keydown", function(event) {
 	}
 });
 
+var web = document.getElementById("webpage");
+var con = document.createElement("div");
+con.setAttribute("id", "content");
+
+
+
 exo = exo.reverse();
-loadSearch("");
-newDec();
+//loadSearch("");
+//newDec();
+resetAll();
 
 function loadSearch(z) {
   for (var i = 0; i < exo.length; i++) {
-    if (exo[i].name.toLowerCase().includes(z) && (exo[i].loadName == typeSelected || typeSelected == "all")) {
-	   var con = document.getElementById("content");
+    if (exo[i].name.toLowerCase().includes(z) && (exo[i].loadName == typeSelected || typeSelected == "all") && (exo[i].star == sTypeSelected || sTypeSelected == "all")) {
 	   var col = document.createElement("div");
+     col.classList.add("planet-box");
 	   var thumb = document.createElement("div");
 	   var cap = document.createElement("div");
 	   var pic = document.createElement("IMG");
@@ -1534,7 +1617,6 @@ function loadSearch(z) {
 	   col.classList.add("col-md-3");
 	   col.classList.add("col-active");
 	   col.classList.add(exo[i].loadName);
-	   col.classList.add("planet-box");
 	   thumb.classList.add("thumbnail");
 	   cap.classList.add("caption");
 	   btn1.classList.add("modal-trigger");
@@ -1548,8 +1630,19 @@ function loadSearch(z) {
 	   btn2.classList.add("btn-default");
 	   pic.style.borderRadius="10px";
 	   bblock.classList.add("btn-group")
+     con.classList.add("content");
    }
  }
+ if (firstLoad) {
+    window.setTimeout(function() {
+    web.appendChild(con);
+    firstLoad = false;
+    resetAll();
+  }, 4000);
+
+  } else {
+    web.appendChild(con);
+  }
 }
 
 
@@ -1687,30 +1780,25 @@ for (var i = 0; i < mdb.length; i++) {
 }
 }
 
-let boxes = document.getElementsByClassName("planet-box");
-var fullContent = document.getElementById("content");
-
 function removeAll() {
-  fullContent.innerHTML = "";
+  con.innerHTML = "";
   console.log("Elements Cleared")
 }
 
 function lessContent() {
+var boxes = document.getElementsByClassName("planet-box");
   if(boxes.length < 1) {
-    console.log("No results")
+    console.log("No results");
     var nada = document.createTextNode("Nothing to Show");
     var nadaCon = document.createElement("div");
     nadaCon.classList.add("nada-content")
     nadaCon.appendChild(nada);
-    fullContent.appendChild(nadaCon);
+    con.appendChild(nadaCon);
   }
 }
 
 search.addEventListener("keyup", function() {
-  removeAll();
-  loadSearch(search.value.toLowerCase());
-  lessContent();
-  newDec();
+  resetAll();
 });
 
 var gg2 = document.getElementById("gasGiantButton");
@@ -1721,73 +1809,50 @@ var uk2 = document.getElementById("unknownButton");
 var al2 = document.getElementById("allButton");
 
 al2.addEventListener("click", function() {
-  removeAll();
   typeSelected = "all";
-  loadSearch(search.value.toLowerCase());
-  newDec();
-  lessContent();
+  resetAll();
 });
 
 gg2.addEventListener("click", function() {
-  removeAll();
   typeSelected = "gas-giant";
-  loadSearch(search.value.toLowerCase());
-  newDec();
-  lessContent();
+  resetAll();
 });
 
 nl2.addEventListener("click", function() {
-  removeAll();
   typeSelected = "neptune-like";
-  loadSearch(search.value.toLowerCase());
-  newDec();
-  lessContent();
+  resetAll();
 });
 
 se2.addEventListener("click", function() {
-  removeAll();
   typeSelected = "super-earth";
-  loadSearch(search.value.toLowerCase());
-  newDec();
-  lessContent();
+  resetAll();
 });
 
 tr2.addEventListener("click", function() {
-  removeAll();
   typeSelected = "terrestrial";
-  loadSearch(search.value.toLowerCase());
-  newDec();
-  lessContent();
+  resetAll();
 });
 
 uk2.addEventListener("click", function() {
-  removeAll();
   typeSelected = "unknown";
-  loadSearch(search.value.toLowerCase());
-  newDec();
-  lessContent();
+  resetAll();
 });
 
 var droop = document.getElementById("dropdown");
+var sDrop = document.getElementById("dropdown2");
 
 droop.addEventListener("change", function() {
 	if (droop.value == "dda") {
 		exo = exo.sort(function (a, b) {
   		return a.date - b.date;
 		});
-		removeAll();
-		loadSearch(search.value.toLowerCase());
-		newDec();
-  		lessContent();
+		resetAll();
 	} else if (droop.value == "ddd") {
 		exo = exo.sort(function (a, b) {
   		return a.date - b.date;
 		});
 		exo = exo.reverse();
-		removeAll();
-		loadSearch(search.value.toLowerCase());
-		newDec();
-  		lessContent();
+		resetAll();
 	} else if (droop.value == "nasc") {
 		exo.sort(function(a, b) {
   		var nameA = a.name.toUpperCase(); // ignore upper and lowercase
@@ -1801,11 +1866,8 @@ droop.addEventListener("change", function() {
   		// names must be equal
   		return 0;
 		});
-		removeAll();
-		loadSearch(search.value.toLowerCase());
-		newDec();
-  		lessContent();
-	} else if (droop.value == "ndesc") { 
+		resetAll();
+	} else if (droop.value == "ndesc") {
 		exo.sort(function(a, b) {
   		var nameA = a.name.toUpperCase(); // ignore upper and lowercase
   		var nameB = b.name.toUpperCase(); // ignore upper and lowercase
@@ -1819,26 +1881,84 @@ droop.addEventListener("change", function() {
   		return 0;
 		});
 		exo=exo.reverse();
-		removeAll();
-		loadSearch(search.value.toLowerCase());
-		newDec();
-  		lessContent();
+		resetAll();
 	} else if (droop.value == "ncon") {
 		exo = exo.sort(function (a, b) {
   		return a.contentNum - b.contentNum;
 		});
 		exo=exo.reverse();
-		removeAll();
-		loadSearch(search.value.toLowerCase());
-		newDec();
-  		lessContent();
+		resetAll();
 	} else if (droop.value == "ocon") {
 		exo = exo.sort(function (a, b) {
   		return a.contentNum - b.contentNum;
 		});
-		removeAll();
-		loadSearch(search.value.toLowerCase());
-		newDec();
-  		lessContent();
-	}
+		resetAll();
+	} else if (droop.value == "pmasup") {
+    exo = exo.sort(function (a, b) {
+      return a.actMass - b.actMass;
+		});
+    resetAll();
+  } else if (droop.value == "pmasdo") {
+    exo = exo.sort(function (a, b) {
+      return a.actMass - b.actMass;
+		});
+    exo=exo.reverse();
+    resetAll();
+  } else if (droop.value == "pradup") {
+    exo = exo.sort(function (a, b) {
+      return a.actRad - b.actRad;
+		});
+    resetAll();
+  } else if (droop.value == "praddo") {
+    exo = exo.sort(function (a, b) {
+      return a.actRad - b.actRad;
+		});
+    exo=exo.reverse();
+    resetAll();
+  } else if (droop.value == "pyup") {
+    exo = exo.sort(function (a, b) {
+      return a.days - b.days;
+		});
+    resetAll();
+  } else if (droop.value == "pydo") {
+    exo = exo.sort(function (a, b) {
+      return a.days - b.days;
+		});
+    exo=exo.reverse();
+    resetAll();
+  } else if (droop.value == "disup") {
+    exo = exo.sort(function (a, b) {
+      return a.distance - b.distance;
+		});
+    resetAll();
+  } else if (droop.value == "disdo") {
+    exo = exo.sort(function (a, b) {
+      return a.distance - b.distance;
+		});
+    exo=exo.reverse();
+    resetAll();
+  }
+
 });
+
+sDrop.addEventListener("change", function() {
+  if (sDrop.value == "al") {
+    sTypeSelected = "all";
+  } else if (sDrop.value == "u") {
+    sTypeSelected = "unknown";
+  } else if (sDrop.value == "sby") {
+
+  } else {
+    sTypeSelected = sDrop.value.toUpperCase() + "-type";
+  }
+  resetAll();
+});
+
+
+
+function resetAll() {
+  removeAll();
+  loadSearch(search.value.toLowerCase());
+  newDec();
+  lessContent();
+}

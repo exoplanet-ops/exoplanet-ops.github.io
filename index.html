@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="master.css">
 <link rel="stylesheet" href="modal.css">
 <link rel="stylesheet" href="tooltips.css">
+<link rel="stylesheet" href="loader.css">
 <link rel="icon" href="img/favo/clogo.png">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -31,17 +32,37 @@
 <br>
 <select id="dropdown" class=" btn btn-danger">
 	<option value="sby">-- Sort by --</option>
-  <option value="dda">Date Discovered Asc.</option>
-  <option value="ddd">Date Discovered Desc.</option>
-  <option value="nasc">Name Asc.</option>
-  <option value="ndesc">Name Desc.</option>
-  <option value="ncon">Newest Content First</option>
+	<option value="ncon">Newest Content First</option>
   <option value="ocon">Oldest Content First</option>
+  <option value="dda">Date Discovered &uarr;</option>
+  <option value="ddd">Date Discovered &darr;</option>
+  <option value="nasc">Name &uarr;</option>
+  <option value="ndesc">Name &darr;</option>
+	<option value="pmasup">Planet Mass &uarr;</option>
+	<option value="pmasdo">Planet Mass &darr;</option>
+	<option value="pradup">Planet Radius &uarr;</option>
+	<option value="praddo">Planet Radius &darr;</option>
+	<option value="pyup">Planetary Year &uarr;</option>
+	<option value="pydo">Planetary Year &darr;</option>
+	<option value="disup">Distance &uarr;</option>
+	<option value="disdo">Distance &darr;</option>
+</select>
+<select id="dropdown2" class=" btn btn-info">
+	<option value="sby">-- Star Type --</option>
+	<option value="al">All Types</option>
+  <option value="o">O-Type</option>
+  <option value="b">B-Type</option>
+  <option value="a">A-Type</option>
+  <option value="f">F-Type</option>
+  <option value="g">G-Type</option>
+	<option value="k">K-Type</option>
+  <option value="m">M-type</option>
+	<option value="u">Unknown</option>
 </select>
 </div>
 <br>
 </div>
-<div id="content">
+<div id="webpage">
 
 </div>
 <div id="modal-box" class="modal1">
@@ -135,23 +156,32 @@
 <br>
 <p>Information was gathered from a variety of sources including but not limited to: <a href="https://exoplanets.nasa.gov/">exoplanets.nasa.gov</a>, <a href="https://exoplanetarchive.ipac.caltech.edu/">exoplanetarchive.ipac.caltech.edu</a>, <a href="https://www.universeguide.com/">www.universeguide.com/</a></p>
 <br>
-<div class="tooltips">Pre-Alpha | 0.0.05
+<div class="tooltips">Pre-Alpha | 0.0.06
   <div class="tooltiptext">
-    <h3>Whats New In Pre-Alpha Update 5?</h3>
-    <p><span style="color: #32bce8">New Planets: </span> 23 New Planets from 51 Eridani b to BD-13 2130 b</p>
-    <p><span style="color: #32bce8">Expanded UI: </span> Planets now appear newest to oldest to make viewing new content easier. A dropdown menu also enables filtering</p>
-    <p><span style="color: #32bce8">Expanded UI: </span> We (painstakingly) redid all our code to add a search bar</p>
-	<p><span style="color: #32bce8">Updated UI: </span>Mini scrollbars on captions longer than 3 lines</p>
+    <h3>Whats New In Pre-Alpha Update 6?</h3>
+    <p><span style="color: #32bce8">New Planets: </span> 5 New Planets from BD+14 4559 B to </p>
+    <p><span style="color: #32bce8">Expanded UI: </span> Filtering to the max! You are now able to execute every filter imaginable because someday there might be more than one-hundred planets featured on this site</p>
+    <p><span style="color: #32bce8">Updated UI: </span> We added a loading screen so that when the page loads all the planets you wont have to watch the planets load onto the screen</p>
+		<p><span style="color: #ffeb00">Public Info: </span> We are now promising all future release dates</p>
 
-    <h3>What to expect in Update 6?</h3>
-    <p><span style="color: #32bce8">New Planets: </span>10-20 New planets of all types hopefully more Terrestrial and Super-Earth planets</p>
-    <p><span style="color: #32bce8">Expanded UI: </span>In Update 6 or Update 7 we hope to add more filters for when numbers reach far above what is physically viewable</p>
+    <h3>What to expect in Update 7?</h3>
+    <p><span style="color: #32bce8">New Planets: </span>Next update will be a massive overhaul of 50+ planets</p>
+		<p><span style="color: #32bce8">Updated UI: </span>We'd like to add some more styling but since its not our primary concern right now we will put that to the side</p>
+		<p><span style="color: #ffeb00">Expected Release: </span>2/10/2020</p>
   </div>
 </div>
 </div>
+
+<div class=starter id="pageLoader">
+	<div class="loader">
+	</div>
+	<h1 class="display">Getting a few things ready</h1>
+</div>
+
+
 <script src="buttons.js"></script>
 <script src="planets.js"></script>
-<!--<script src="loader.js"></script>-->
+<script src="load.js"></script>
 <script src="modals.js"></script>
 </body>
 </html>

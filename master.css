@@ -11,7 +11,7 @@ font-size: 9pt;
 margin: 0;
 }
 
-#content {
+.content {
 display: flex;
 flex-flow: row wrap;
 align-content: stretch;
@@ -293,6 +293,10 @@ background-color: #bdbdbd;
   align-items: center;
 }
 
+select {
+ width: 49%;
+}
+
 @media only screen and (min-width: 768px) {
   #planetRep {
     width: 60%;
@@ -338,5 +342,9 @@ background-color: #bdbdbd;
   .searchBar {
     height: 35px;
     width: 35%;
+  }
+
+  select {
+    width: 10%;
   }
 }

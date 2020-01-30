@@ -1,0 +1,39 @@
+.starter {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #171717;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  animation: fadeOut 5.3s;
+}
+
+.loader {
+  border: 10px dashed #f3f3f3; /* Light grey */
+  border-radius: 50%;
+  width: 210px;
+  height: 210px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeOut {
+  0% {opacity: 1}
+  75% {opacity: 1}
+  95% {opacity: 0}
+}
+
+.starter .display {
+  text-shadow: none;
+  color: #f3f3f3;
+  font-family: 'Bebas Neue';
+}
