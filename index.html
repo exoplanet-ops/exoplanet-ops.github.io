@@ -15,8 +15,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
-<div class="jumbotron" style="padding-left: 15px; padding-right: 15px; background-color: #2b2b2b; color: white;">
-<h1 class="display">CMCN's Exoplanet Catalog</h1>
+<div class="jumbotron" style="padding-left: 15px; padding-right: 15px; background-color: #2b2b2b; color: white;" id="navHeader">
+<h1 class="display" id="title">CMCN's Exoplanet Catalog</h1>
 <br>
 <div class="btn-group" id="bgroup">
 <a href="#" class="btn btn-default active" id="allButton">All</a>
@@ -25,12 +25,7 @@
 <a href="#" class="btn btn-danger" id="superEarthButton">Super Earth</a>
 <a href="#" class="btn btn-danger" id="terrestrialButton">Terrestrial</a>
 <a href="#" class="btn btn-danger" id="unknownButton">Unknown</a>
-</div>
-<br>
-<div class="item-normal">
-<input type="text" id="planetSearch" class="searchBar" placeholder="Search for planet...">
-<br>
-<select id="dropdown" class=" btn btn-danger">
+<select id="dropdown" class=" btn btn-info">
 	<option value="sby">-- Sort by --</option>
 	<option value="ncon">Newest Content First</option>
   <option value="ocon">Oldest Content First</option>
@@ -61,7 +56,13 @@
 </select>
 </div>
 <br>
+<div class="item-normal">
+<input type="text" id="planetSearch" class="searchBar" placeholder="Search for planet...">
+<br>
 </div>
+<br>
+</div>
+
 <div id="webpage">
 
 </div>

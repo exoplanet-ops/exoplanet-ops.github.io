@@ -1,5 +1,52 @@
+//Global variables
 var curr;
 var firstLoad = true;
+var devTools = false;
+
+  //Setting Types to "all"
+  let typeSelected = "all"
+  let sTypeSelected = "all"
+
+//Global Document variables
+var search = document.getElementById("planetSearch");
+var droop = document.getElementById("dropdown");
+var sDrop = document.getElementById("dropdown2");
+var gg2 = document.getElementById("gasGiantButton");
+var nl2 = document.getElementById("neptuneLikeButton");
+var se2 = document.getElementById("superEarthButton");
+var tr2 = document.getElementById("terrestrialButton");
+var uk2 = document.getElementById("unknownButton");
+var al2 = document.getElementById("allButton");
+var web = document.getElementById("webpage");
+var con = document.createElement("div");
+//Global Document Variables "Modals"
+var modal = document.getElementById("modal-box");
+var header = document.getElementById("planetName");
+var paragraph = document.getElementById("modalP");
+var footer = document.getElementById("modalF");
+var picture = document.getElementById("planetRep");
+var fullDesc = document.getElementById("descBox");
+var yearInfo = document.getElementById("yearDis");
+var plty = document.getElementById("planetType");
+var or = document.getElementById("or");
+var op = document.getElementById("op");
+var oe = document.getElementById("oe");
+var pmass = document.getElementById("mass");
+var pradius = document.getElementById("radius");
+var largePlanet = document.getElementById("largerPlanet");
+var smallPlanet = document.getElementById("smallerPlanet")
+var sc = document.getElementById("smallCircle");
+var sm = document.getElementById("starmass");
+var sr = document.getElementById("starradius");
+var smallStar = document.getElementById("smallerStar");
+var largeStar = document.getElementById("largerStar");
+var sc2 = document.getElementById("smallCircle2");
+var ukk = document.getElementById("unknownVal1");
+var ukk2 = document.getElementById("unknownVal2");
+var stype = document.getElementById("startype");
+var dis = document.getElementById("distanceFrom");
+
+//Planet Info
 let exo = [
 //0
 {name: "11 Comae Berenices b",
@@ -1479,16 +1526,26 @@ verified: true},
 
 //Text Algorithms
 for (var i = 0; i < exo.length; i++) {
+
+  //Creating image source and marker variable
   var xmma = exo[i].name.toLowerCase();
   xmma = xmma.replace(/\s/g, "");
   exo[i].marker = xmma;
   exo[i].source = "img/" + xmma + ".JPG";
+
+  //Creating LoadName variable
   var vmma = exo[i].type.toLowerCase();
   vmma = vmma.replace(/\s/g, "-");
   exo[i].loadName = vmma;
+
+  //Getting Star name from Planet Name
   var zmma = exo[i].name.substring(0, exo[i].name.length - 1);
   exo[i].starName = zmma;
+
+  //Creating content number
   exo[i].contentNum = i;
+
+  //Creating a single time variable
   if (exo[i].oPeriodUnits=="years") {
     exo[i].days = exo[i].oPeriod * 365;
   } else if (exo[i].oPeriodUnits=="days") {
@@ -1496,6 +1553,8 @@ for (var i = 0; i < exo.length; i++) {
   } else {
     exo[i].days = 0;
   }
+
+  //Creating a single mass variable
   if (exo[i].massRadUnits == "Jupiter") {
     exo[i].actMass = exo[i].mass * 317.8;
     exo[i].actRad = exo[i].pRadius * 43441;
@@ -1506,22 +1565,19 @@ for (var i = 0; i < exo.length; i++) {
     exo[i].actMass = 0;
     exo[i].actRad = 0;
   }
-}
 
-var devTools = false;
-var search = document.getElementById("planetSearch");
-let typeSelected = "all"
-let sTypeSelected = "all"
+//end
+}
 
 document.addEventListener("keydown", function(event) {
 	if(event.key=="Z" && event.shiftKey && !devTools) {
 		console.log("Developer Tools Enabled");
     console.log("Current number of entries: " + exo.length)
     console.log("Commands: \n Shift + L - Run copy analysis\n Ctrl + Shift + L - Run complex copy analysis")
-		devTools = true;
+		devTools = !devTools;
 	} else if (event.key=="Z" && event.shiftKey) {
 		console.log("Developer Tools Disabled");
-		devTools = false;
+		devTools = !devTools;
 	}
 });
 
@@ -1564,15 +1620,10 @@ document.addEventListener("keydown", function(event) {
 	}
 });
 
-var web = document.getElementById("webpage");
-var con = document.createElement("div");
+//Set content ID
 con.setAttribute("id", "content");
 
-
-
 exo = exo.reverse();
-//loadSearch("");
-//newDec();
 resetAll();
 
 function loadSearch(z) {
@@ -1645,43 +1696,16 @@ function loadSearch(z) {
   }
 }
 
-
 function newDec() {
 var mdb = document.getElementsByClassName("modal-trigger");
-var header = document.getElementById("planetName");
-var paragraph = document.getElementById("modalP");
-var footer = document.getElementById("modalF");
-var picture = document.getElementById("planetRep");
-var fullDesc = document.getElementById("descBox");
-var yearInfo = document.getElementById("yearDis");
-var plty = document.getElementById("planetType");
-var or = document.getElementById("or");
-var op = document.getElementById("op");
-var oe = document.getElementById("oe");
-var pmass = document.getElementById("mass");
-var pradius = document.getElementById("radius");
-var largePlanet = document.getElementById("largerPlanet");
-var smallPlanet = document.getElementById("smallerPlanet")
-var sc = document.getElementById("smallCircle");
-var sm = document.getElementById("starmass");
-var sr = document.getElementById("starradius");
-var smallStar = document.getElementById("smallerStar");
-var largeStar = document.getElementById("largerStar");
-var sc2 = document.getElementById("smallCircle2");
-var ukk = document.getElementById("unknownVal1");
-var ukk2 = document.getElementById("unknownVal2");
-var stype = document.getElementById("startype");
-var dis = document.getElementById("distanceFrom");
 
 var cr;
 for (var i = 0; i < mdb.length; i++) {
 	mdb[i].addEventListener("click", function() {
-    var modal = document.getElementById("modal-box");
     modal.style.display = "block";
 		for (var j = 0; j < exo.length; j++) {
 			if (this.classList.contains(exo[j].marker)) {
 				cr = j;
-        console.log("Debug2")
 				break;
 			}
 		}
@@ -1801,13 +1825,6 @@ search.addEventListener("keyup", function() {
   resetAll();
 });
 
-var gg2 = document.getElementById("gasGiantButton");
-var nl2 = document.getElementById("neptuneLikeButton");
-var se2 = document.getElementById("superEarthButton");
-var tr2 = document.getElementById("terrestrialButton");
-var uk2 = document.getElementById("unknownButton");
-var al2 = document.getElementById("allButton");
-
 al2.addEventListener("click", function() {
   typeSelected = "all";
   resetAll();
@@ -1838,22 +1855,19 @@ uk2.addEventListener("click", function() {
   resetAll();
 });
 
-var droop = document.getElementById("dropdown");
-var sDrop = document.getElementById("dropdown2");
-
 droop.addEventListener("change", function() {
-	if (droop.value == "dda") {
+	if (this.value == "dda") {
 		exo = exo.sort(function (a, b) {
   		return a.date - b.date;
 		});
 		resetAll();
-	} else if (droop.value == "ddd") {
+	} else if (this.value == "ddd") {
 		exo = exo.sort(function (a, b) {
   		return a.date - b.date;
 		});
 		exo = exo.reverse();
 		resetAll();
-	} else if (droop.value == "nasc") {
+	} else if (this.value == "nasc") {
 		exo.sort(function(a, b) {
   		var nameA = a.name.toUpperCase(); // ignore upper and lowercase
   		var nameB = b.name.toUpperCase(); // ignore upper and lowercase
@@ -1867,7 +1881,7 @@ droop.addEventListener("change", function() {
   		return 0;
 		});
 		resetAll();
-	} else if (droop.value == "ndesc") {
+	} else if (this.value == "ndesc") {
 		exo.sort(function(a, b) {
   		var nameA = a.name.toUpperCase(); // ignore upper and lowercase
   		var nameB = b.name.toUpperCase(); // ignore upper and lowercase
@@ -1882,56 +1896,56 @@ droop.addEventListener("change", function() {
 		});
 		exo=exo.reverse();
 		resetAll();
-	} else if (droop.value == "ncon") {
+	} else if (this.value == "ncon") {
 		exo = exo.sort(function (a, b) {
   		return a.contentNum - b.contentNum;
 		});
 		exo=exo.reverse();
 		resetAll();
-	} else if (droop.value == "ocon") {
+	} else if (this.value == "ocon") {
 		exo = exo.sort(function (a, b) {
   		return a.contentNum - b.contentNum;
 		});
 		resetAll();
-	} else if (droop.value == "pmasup") {
+	} else if (this.value == "pmasup") {
     exo = exo.sort(function (a, b) {
       return a.actMass - b.actMass;
 		});
     resetAll();
-  } else if (droop.value == "pmasdo") {
+  } else if (this.value == "pmasdo") {
     exo = exo.sort(function (a, b) {
       return a.actMass - b.actMass;
 		});
     exo=exo.reverse();
     resetAll();
-  } else if (droop.value == "pradup") {
+  } else if (this.value == "pradup") {
     exo = exo.sort(function (a, b) {
       return a.actRad - b.actRad;
 		});
     resetAll();
-  } else if (droop.value == "praddo") {
+  } else if (this.value == "praddo") {
     exo = exo.sort(function (a, b) {
       return a.actRad - b.actRad;
 		});
     exo=exo.reverse();
     resetAll();
-  } else if (droop.value == "pyup") {
+  } else if (this.value == "pyup") {
     exo = exo.sort(function (a, b) {
       return a.days - b.days;
 		});
     resetAll();
-  } else if (droop.value == "pydo") {
+  } else if (this.value == "pydo") {
     exo = exo.sort(function (a, b) {
       return a.days - b.days;
 		});
     exo=exo.reverse();
     resetAll();
-  } else if (droop.value == "disup") {
+  } else if (this.value == "disup") {
     exo = exo.sort(function (a, b) {
       return a.distance - b.distance;
 		});
     resetAll();
-  } else if (droop.value == "disdo") {
+  } else if (this.value == "disdo") {
     exo = exo.sort(function (a, b) {
       return a.distance - b.distance;
 		});
@@ -1942,19 +1956,17 @@ droop.addEventListener("change", function() {
 });
 
 sDrop.addEventListener("change", function() {
-  if (sDrop.value == "al") {
+  if (this.value == "al") {
     sTypeSelected = "all";
-  } else if (sDrop.value == "u") {
+  } else if (this.value == "u") {
     sTypeSelected = "unknown";
-  } else if (sDrop.value == "sby") {
-
+  } else if (this.value == "sby") {
+    //none
   } else {
-    sTypeSelected = sDrop.value.toUpperCase() + "-type";
+    sTypeSelected = this.value.toUpperCase() + "-type";
   }
   resetAll();
 });
-
-
 
 function resetAll() {
   removeAll();

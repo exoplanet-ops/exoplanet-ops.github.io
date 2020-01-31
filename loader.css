@@ -5,12 +5,12 @@
   width: 100%;
   height: 100%;
   background-color: #171717;
-  z-index: 3;
+  z-index: 5;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column nowrap;
-  animation: fadeOut 5.3s;
+  animation: fadeOut 5.7s;
 }
 
 .loader {

@@ -222,6 +222,10 @@ display: none;
   display: none;
 }
 
+.jumbotron {
+  transition: 0.4s;
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 5px;
@@ -293,10 +297,6 @@ background-color: #bdbdbd;
   align-items: center;
 }
 
-select {
- width: 49%;
-}
-
 @media only screen and (min-width: 768px) {
   #planetRep {
     width: 60%;
@@ -344,7 +344,11 @@ select {
     width: 35%;
   }
 
-  select {
-    width: 10%;
+  .jumbotron {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 4;
+    transition: 0.4s
   }
 }

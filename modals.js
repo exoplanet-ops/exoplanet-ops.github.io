@@ -23,3 +23,18 @@ window.addEventListener("click", function(event) {
     modal.style.display = "none";
   }
 });
+
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    document.getElementById("navHeader").style.paddingTop = "10px";
+    document.getElementById("navHeader").style.paddingBottom = "10px";
+    document.getElementById("title").style.marginTop = "0px";
+  } else {
+    document.getElementById("navHeader").style.paddingTop = "48px";
+    document.getElementById("navHeader").style.paddingBottom = "48px";
+    document.getElementById("title").style.marginTop = "20px";
+  }
+}
